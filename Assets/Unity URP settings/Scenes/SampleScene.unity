@@ -512,7 +512,7 @@ Transform:
   - {fileID: 5823605020442943594}
   - {fileID: 4269713324603809684}
   m_Father: {fileID: 1144650846}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &754566112 stripped
 Camera:
@@ -792,6 +792,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1414241582}
   - {fileID: 416981407}
   - {fileID: 2129980520}
   m_Father: {fileID: 0}
@@ -1268,8 +1269,8 @@ RectTransform:
   - {fileID: 1257107403}
   - {fileID: 1518584119}
   - {fileID: 1436315128}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1144650846}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1798,7 +1799,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2029408097
 GameObject:
@@ -1982,7 +1983,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1144650846}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2129980521
 MonoBehaviour:
