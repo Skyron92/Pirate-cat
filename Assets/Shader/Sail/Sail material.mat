@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sail material
-  m_Shader: {fileID: -6465566751694194690, guid: 38843a175ef755a43b6f9d16ba279b70,
+  m_Shader: {fileID: -6465566751694194690, guid: 81d2b9e3e39c31a488e2f58473cbae27,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -35,15 +35,23 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fresnel_power: 0.18
-    - _Normal_intensity: 0.38
-    - _Offset_speed: 24
+    - _Gradient_Scale: 0.06
+    - _Noise_power: 0
+    - _Normal_intensity: 1
+    - _Offset_speed: 2.24
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _intensity: 0.7
-    m_Colors: []
+    - _Size: 0
+    - _Smoothstep_max: 0
+    - _Smoothtep_min: 0
+    m_Colors:
+    - _Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 0}
+    - _Color_from: {r: 0, g: 0, b: 0, a: 0}
+    - _Color_to: {r: 0, g: 0, b: 0, a: 0}
+    - _Noise_Remap: {r: 0.4, g: 1, b: -1, a: 0}
+    - _Rotate_projection: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &5626345330820220921
+--- !u!114 &628736495469104048
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
