@@ -18,7 +18,16 @@ public class CatEditor : MonoBehaviour
         hatIndex += ChangeValue;
         if (hatIndex >= hats.Count) hatIndex = 0;
         if (hatIndex < 0) hatIndex = hats.Count - 1;
-        cat.Hat = hats[hatIndex];
+        if (ChangeValue < 0) {
+            cat.Hats[hatIndex].SetActive(true);
+            if (hatIndex + 1 >= hats.Count) cat.Hats[0].SetActive(false);
+            else cat.Hats[hatIndex + 1].SetActive(false);
+        }
+        else {
+            cat.Hats[hatIndex].SetActive(true);
+            if (hatIndex - 1 < 0) cat.Hats[hats.Count - 1].SetActive(false);
+            else cat.Hats[hatIndex - 1].SetActive(false);
+        }
     }
     
     public void SwitchClothes(int ChangeValue) {

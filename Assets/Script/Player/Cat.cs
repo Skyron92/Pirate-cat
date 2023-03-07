@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Cat : MonoBehaviour {
     public int NavigateurStat;
     public int CanonnierStat;
     public int EscrimeurStat;
-    [HideInInspector] public GameObject Hat;
+    public string Name;
+    public List<GameObject> Hats = new List<GameObject>();
     [HideInInspector] public GameObject EyePatch;
     [HideInInspector] public Fur FurCat;
-    [HideInInspector] public Material Clothes;
+    public Material Clothes;
     [SerializeField] private MeshRenderer Body;
     [SerializeField] private MeshRenderer Face;
     [SerializeField] private MeshRenderer Ear;
@@ -22,6 +24,7 @@ public class Cat : MonoBehaviour {
 
     void SwitchSkin() {
         Body.material = Clothes;
+        if(FurCat == null) return;
         Face.material = FurCat.Face;
         Ear.material = FurCat.Ear;
         LeftHand.material = FurCat.LeftHand;
