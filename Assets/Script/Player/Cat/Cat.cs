@@ -32,8 +32,22 @@ public class Cat : MonoBehaviour {
         Tail.material = FurCat.Tail;
     }
 
-    public void SetName(string name)
-    {
+    public void SetName(string name) {
         Name = name;
+    }
+
+    public void SetNewCat(Cat newCat) {
+        newCat.NavigateurStat = NavigateurStat;
+        newCat.CanonnierStat = CanonnierStat;
+        newCat.EscrimeurStat = EscrimeurStat;
+        newCat.Name = Name;
+        newCat.FurCat = FurCat;
+        newCat.Clothes = Clothes;
+        for (int i = 0; i < Hats.Count; i++) {
+            newCat.Hats[i].SetActive(Hats[i].activeSelf);
+        }
+        for (int i = 0; i < Eyepatches.Count; i++) {
+            newCat.Eyepatches[i].SetActive(Eyepatches[i].activeSelf);
+        }
     }
 }

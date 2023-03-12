@@ -23,6 +23,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr
     - Preload
+  - m_GUID: 75a3410de96b27b44a41a2e1899b5d12
+    m_Address: Abordage Text_fr
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr
+    - Preload
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 988259b8669e8b3489497a48a577b330, type: 2}
   m_SchemaSet:

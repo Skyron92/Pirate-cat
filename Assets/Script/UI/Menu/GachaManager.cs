@@ -31,8 +31,9 @@ public class GachaManager : MonoBehaviour
             int hatvalue = _roll.Next(0, hatList.Count);
             cat.Hats[hatvalue].SetActive(true);
             cat.FurCat = furList[_roll.Next(0, furList.Count)];
-            
             CreateStatistic();
+            
+            CatsManager.HiredCats.Add(cat);
         }
     }
 

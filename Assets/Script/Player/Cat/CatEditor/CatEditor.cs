@@ -64,4 +64,8 @@ public class CatEditor : MonoBehaviour
         }
     }
 
+    public void ValidateCat() {
+        CatsManager.Team.Add(cat);
+    }
+
 }
