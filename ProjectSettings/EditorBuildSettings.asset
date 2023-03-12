@@ -8,4 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Unity URP settings/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 61e87521fe5eb9444b4b7579f4064884,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: d02a4b8e192159746a7ce3934d1f2326,
+      type: 2}
