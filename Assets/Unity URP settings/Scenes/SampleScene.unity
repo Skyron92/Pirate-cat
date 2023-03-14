@@ -1248,7 +1248,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 150319231}
+  - component: {fileID: 150319234}
   - component: {fileID: 150319232}
+  - component: {fileID: 150319233}
   m_Layer: 0
   m_Name: ----------ABORDAGE------------
   m_TagString: Untagged
@@ -1286,9 +1288,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersCatPosition: {fileID: 6752738028569616058}
-  AIsCatPosition: {fileID: 6752738028569616057}
   catPrefab: {fileID: 8913578225335684845, guid: 6b05fea5398f27f4d9f72538de8ddf72,
     type: 3}
+  _currentCat: {fileID: 0}
+  ennemy: {fileID: 0}
+  crew:
+  - {fileID: 6395752236314411769, guid: 6b05fea5398f27f4d9f72538de8ddf72, type: 3}
+  attackButton: {fileID: 1549433778}
+  switchButton: {fileID: 16243070}
+--- !u!114 &150319233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150319230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88f5a83b0c027b4899e2f5ccf9846f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  AIsCatPosition: {fileID: 6752738028569616057}
+  crew:
+  - {fileID: 4186683054744372605, guid: 6f5090bc8c7ef17478dea927c82b6c0e, type: 3}
+  _currentCat: {fileID: 0}
+  catPrefab: {fileID: 1831615813540088169, guid: 6f5090bc8c7ef17478dea927c82b6c0e,
+    type: 3}
+--- !u!114 &150319234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150319230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274f5bf248eb51a41ae811af11f8c371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 150319232}
+  Ennemy: {fileID: 150319233}
 --- !u!1 &158046964
 GameObject:
   m_ObjectHideFlags: 0
@@ -4361,7 +4401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &589616031
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12822,7 +12862,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1549433779}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 150319232}
+        m_TargetAssemblyTypeName: TeamManager, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1549433779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14198,7 +14250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765716562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1054.263, y: -0.0000705719, z: 916.67175}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16472,6 +16524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6f0bbfbf74400e91b66cd82d021628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 0
+  maxHp: 0
   NavigateurStat: 0
   CanonnierStat: 4
   EscrimeurStat: 0
@@ -17051,6 +17105,11 @@ PrefabInstance:
         type: 3}
       propertyPath: sensitivity
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462552089150229652, guid: cfd95da6b7e498847a3a32cddec573ae,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4804262958051088110, guid: cfd95da6b7e498847a3a32cddec573ae,
         type: 3}

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Cat : MonoBehaviour {
+
+    public int hp;
+    public int maxHp;
     public int NavigateurStat;
     public int CanonnierStat;
     public int EscrimeurStat;
@@ -17,6 +20,10 @@ public class Cat : MonoBehaviour {
     [SerializeField] private MeshRenderer LeftHand;
     [SerializeField] private MeshRenderer RightHand;
     [SerializeField] private SkinnedMeshRenderer Tail;
+
+    private void Awake() {
+        hp = maxHp;
+    }
 
     private void Update() {
         SwitchSkin();

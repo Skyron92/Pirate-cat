@@ -1252,7 +1252,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -9103484930961366303, guid: fcf36c48370993e48a57a08ae7eb19a4, type: 3}
+  - {fileID: 2100000, guid: 9715bdcc86cdbdc4080849ebe57959bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1448,7 +1448,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8913578225335684845}
-  m_LocalRotation: {x: 0, y: 0.78461945, z: 0, w: 0.61997765}
+  m_LocalRotation: {x: 0, y: 0.7826082, z: 0, w: 0.62251467}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
@@ -1458,7 +1458,7 @@ Transform:
   - {fileID: 7443520279960973695}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 103.371, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 103, z: 0}
 --- !u!95 &2745111456894144045
 Animator:
   serializedVersion: 4
@@ -1491,9 +1491,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6f0bbfbf74400e91b66cd82d021628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NavigateurStat: 0
-  CanonnierStat: 0
-  EscrimeurStat: 0
+  hp: 15
+  maxHp: 15
+  NavigateurStat: 6
+  CanonnierStat: 6
+  EscrimeurStat: 2
   Name: 
   Hats:
   - {fileID: 6394127411637094195}
