@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6f0bbfbf74400e91b66cd82d021628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 13
+  hp: 15
   maxHp: 15
   NavigateurStat: 6
   CanonnierStat: 6

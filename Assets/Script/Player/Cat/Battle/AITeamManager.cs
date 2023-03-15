@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class AITeamManager : MonoBehaviour {
     public TeamManager player;
+    public bool IsYourTurn;
     [SerializeField] private Transform AIsCatPosition;
     public List<Cat> crew = new List<Cat>();
     public Cat _currentCat;
@@ -11,15 +12,18 @@ public class AITeamManager : MonoBehaviour {
     private bool isInAnimation;
     private Cat catEntity;
     [SerializeField] private GameObject catPrefab;
+    private float timer;
+    private bool isSwitchingTurn;
     void Awake()
     {
         PutCat();
     }
     
-    void Update()
-    {
+    void Update() {
         Die();
         TimeAnimation();
+        Attack();
+        SwitchTurn();
     }
     
     public void PutCat() {
@@ -31,9 +35,13 @@ public class AITeamManager : MonoBehaviour {
     }
     
     public void Attack() {
+        if(!IsYourTurn) return;
         _animator.SetBool("IsAttacking", true);
         player.TakeDamage(_currentCat.EscrimeurStat);
         isInAnimation = true;
+        IsYourTurn = !IsYourTurn;
+        player.IsYourTurn = true;
+        isSwitchingTurn = true;
     }
 
     public void TakeDamage(int damage) {
@@ -60,5 +68,19 @@ public class AITeamManager : MonoBehaviour {
             _animator.SetBool("IsTakingDamage", false);
             _animator.SetBool("IsDead", false);
         }
+    }
+    
+    void SwitchTurn() {
+        if (!isSwitchingTurn) return;
+        timer += Time.deltaTime;
+        if (timer >= 4f) {
+            player.IsYourTurn = true;
+            isSwitchingTurn = false;
+            timer = 0;
+        }
+    }
+
+    public void SwitchCat(int index) {
+        _currentCat = crew[index];
     }
 }
