@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 using Slider = UnityEngine.UI.Slider;
 
@@ -16,13 +13,16 @@ public class CatSelection : MonoBehaviour {
 
     private void Awake() {
         life.maxValue = player.crew[index].maxHp;
-        life.value = player.crew[index].hp;
-        currentCatButton.interactable = player.crew[index] != player.currentCat;
         text.text = player.crew[index].Name;
     }
 
+    private void Update() {
+        currentCatButton.interactable = player.crew[index] != player.currentCat;
+        life.value = player.crew[index].hp;
+    }
+
     public void SwitchCat() {
-        // player.currentCat.gameObject.SetActive(false);
+        player.currentIndex = index;
         player.PutNewCat(index);
     }
 }

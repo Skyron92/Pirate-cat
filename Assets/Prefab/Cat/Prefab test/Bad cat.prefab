@@ -302,12 +302,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6f0bbfbf74400e91b66cd82d021628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 15
+  hp: 4
   maxHp: 15
   NavigateurStat: 6
   CanonnierStat: 6
   EscrimeurStat: 6
-  Name: 
+  Name: Jacques
   Hats:
   - {fileID: 4207718623406866615}
   - {fileID: 2585015323023452206}
@@ -2258,7 +2258,7 @@ PrefabInstance:
     - target: {fileID: 6007010237357934550, guid: ba80d52a0fc83f74695634dba3399cbe,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6347541475654016364, guid: ba80d52a0fc83f74695634dba3399cbe,
         type: 3}

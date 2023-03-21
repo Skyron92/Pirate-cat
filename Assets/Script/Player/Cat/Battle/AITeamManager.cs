@@ -7,31 +7,44 @@ public class AITeamManager : MonoBehaviour {
     [SerializeField] private Transform AIsCatPosition;
     public List<Cat> crew = new List<Cat>();
     public Cat _currentCat;
+    private int currentIndex;
     private Animator _animator;
     private float animationTimer;
     private bool isInAnimation;
-    private Cat catEntity;
+    private Cat _catEntity;
     [SerializeField] private GameObject catPrefab;
+    private GameObject _currentCatGameObject;
     private float timer;
     private bool isSwitchingTurn;
-    void Awake()
-    {
+    private bool _catIsDead;
+    
+    void Awake() {
         PutCat();
     }
     
     void Update() {
         Die();
         TimeAnimation();
+        if (_catIsDead && !isInAnimation) {
+            for (int i = 0; i < crew.Count; i++) {
+                if (crew[i].hp <= 0) continue;
+                SwitchCat(i);
+                _catIsDead = false;
+                return;
+            }
+        }
+        if(!HasOneOrMoreCatAlive()) return;
         Attack();
         SwitchTurn();
     }
     
     public void PutCat() {
-        GameObject cat = Instantiate(catPrefab, AIsCatPosition);
-        catEntity = cat.GetComponent<Cat>();
-        crew[0].SetNewCat(catEntity);
+        _currentCatGameObject = Instantiate(catPrefab, AIsCatPosition);
+        _catEntity = _currentCatGameObject.GetComponent<Cat>();
+        crew[0].SetNewCat(_catEntity);
         _currentCat = crew[0];
-        _animator = cat.GetComponent<Animator>();
+        currentIndex = 0;
+        _animator = _currentCatGameObject.GetComponent<Animator>();
     }
     
     public void Attack() {
@@ -40,7 +53,6 @@ public class AITeamManager : MonoBehaviour {
         player.TakeDamage(_currentCat.EscrimeurStat);
         isInAnimation = true;
         IsYourTurn = !IsYourTurn;
-        player.IsYourTurn = true;
         isSwitchingTurn = true;
     }
 
@@ -48,11 +60,11 @@ public class AITeamManager : MonoBehaviour {
         _animator.SetBool("IsTakingDamage", true);
         _currentCat.hp -= damage;
         isInAnimation = true;
-        Debug.Log("Max : " + _currentCat.maxHp + ", damage : " + damage);
     }
 
     public void Die() {
         if(_currentCat.hp > 0) return;
+        _catIsDead = true;
         _animator.SetBool("IsTakingDamage", false);
         _animator.SetBool("IsDead", true);
         isInAnimation = true;
@@ -69,18 +81,28 @@ public class AITeamManager : MonoBehaviour {
             _animator.SetBool("IsDead", false);
         }
     }
+
+    private bool HasOneOrMoreCatAlive() {
+        return crew.Exists(x => x.hp > 0);
+    }
     
     void SwitchTurn() {
         if (!isSwitchingTurn) return;
         timer += Time.deltaTime;
-        if (timer >= 4f) {
+        if (timer >= 2f) {
             player.IsYourTurn = true;
             isSwitchingTurn = false;
             timer = 0;
         }
     }
 
-    public void SwitchCat(int index) {
+    private void SwitchCat(int index) {
+        Destroy(_currentCatGameObject);
+        _currentCatGameObject = Instantiate(catPrefab, AIsCatPosition);
+        _catEntity = _currentCatGameObject.GetComponent<Cat>();
+        crew[index].SetNewCat(_catEntity);
         _currentCat = crew[index];
+        _animator = _currentCatGameObject.GetComponent<Animator>();
+        Debug.Log("New cat is " + _currentCat.Name);
     }
 }

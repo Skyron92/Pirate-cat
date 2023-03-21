@@ -1303,7 +1303,7 @@ MonoBehaviour:
   catPrefab: {fileID: 8913578225335684845, guid: 6b05fea5398f27f4d9f72538de8ddf72,
     type: 3}
   currentCat: {fileID: 0}
-  ennemy: {fileID: 0}
+  ennemy: {fileID: 150319233}
   IsYourTurn: 1
   crew:
   - {fileID: 6395752236314411769, guid: 29c3a76f43770344e8a3069fd558646e, type: 3}
@@ -1311,6 +1311,7 @@ MonoBehaviour:
   - {fileID: 6395752236314411769, guid: 6b74ee46ab8b47d4380ef1a77bc58be7, type: 3}
   attackButton: {fileID: 1549433778}
   switchButton: {fileID: 16243070}
+  currentIndex: 0
 --- !u!114 &150319233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1323,10 +1324,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88f5a83b0c027b4899e2f5ccf9846f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 150319232}
   IsYourTurn: 0
   AIsCatPosition: {fileID: 6752738028569616057}
   crew:
+  - {fileID: 4186683054744372605, guid: dd3fe57b781df3546a2d29ef61f6d2e7, type: 3}
   - {fileID: 4186683054744372605, guid: 6f5090bc8c7ef17478dea927c82b6c0e, type: 3}
   _currentCat: {fileID: 0}
   catPrefab: {fileID: 1831615813540088169, guid: 6f5090bc8c7ef17478dea927c82b6c0e,
