@@ -15,7 +15,7 @@ public class GachaManager : MonoBehaviour
     [SerializeField] [Range(0, 500)] private int cost;
 
     public void HireCat() {
-        if (DataManager.Gold >= cost) {
+        if (CatsManager.Gold >= cost) {
             GameObject newCat = Instantiate(catPrefab);
             cat = newCat.GetComponent<Cat>();
             cat.Clothes = clothList[_roll.Next(0, clothList.Count)];
