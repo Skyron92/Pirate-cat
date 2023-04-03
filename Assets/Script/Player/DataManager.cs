@@ -30,10 +30,11 @@ public class DataManager : MonoBehaviour
             TextMeshProUGUI textMeshPro = tempButton.GetComponentInChildren<TextMeshProUGUI>();
             textMeshPro.text = variableFile.Remove(variableFile.Length - 5, 5);
             tempButton.onClick.AddListener(delegate {
-                PlayerPrefs.SetString(Properties.Pref.LoadedGame, textMeshPro.text);
+                PlayerPrefs.SetString(Properties.Pref.LoadedGame, variableFile);
                 Debug.Log(variableFile + " has been loaded.");
                 loadPanel.SetActive(false);
                 DestroyAllGame();
+                Load();
             });
         }
     }
@@ -82,5 +83,21 @@ public class DataManager : MonoBehaviour
         serializer.TryDeserialize(data, type, ref deserialized).AssertSuccessWithoutWarnings();
 
         return deserialized;
+    }
+
+    public static bool CheckGame(string storyNameWithExtension) {
+        string path = CatPath + Path.DirectorySeparatorChar + storyNameWithExtension;
+        return File.Exists(path);
+    }
+
+    public void Load() {
+        if (PlayerPrefs.HasKey(Properties.Pref.LoadedGame) && CheckGame(PlayerPrefs.GetString(Properties.Pref.LoadedGame))) {
+            catsManager.SetGame(LoadGame(PlayerPrefs.GetString(Properties.Pref.LoadedGame)));
+            PlayerPrefs.DeleteKey(Properties.Pref.LoadedGame);
+            foreach (var VARIABLE in catsManager.team)
+            {
+                Debug.Log(VARIABLE.Name);
+            }
+        }
     }
 }

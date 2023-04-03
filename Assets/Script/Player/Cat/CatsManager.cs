@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [Serializable]
@@ -15,13 +16,25 @@ public class CatsManager : MonoBehaviour
     public string name;
     public int gold;
 
-    private void Update()
-    {
+    private void Update() {
         Debug.Log(Team.Count);
         Debug.Log(HiredCats.Count);
         Name = name;
         Gold = gold;
         hiredCats = HiredCats;
         team = Team;
+    }
+    
+    public void SetGame(CatsManager newCatsManager) {
+        name = newCatsManager.name;
+        gold = newCatsManager.gold;
+        HiredCats.Clear();
+        foreach (Cat cat in newCatsManager.hiredCats) {
+            HiredCats.Add(cat);
+        }
+        Team.Clear();
+        foreach (var cat in newCatsManager.team) {
+            Team.Add(cat);
+        }
     }
 }
