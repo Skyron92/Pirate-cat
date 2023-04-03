@@ -32,6 +32,8 @@ public class CatEditor : MonoBehaviour
             if (_hatIndex - 1 < 0) cat.Hats[hats.Count - 1].SetActive(false);
             else cat.Hats[_hatIndex - 1].SetActive(false);
         }
+
+        cat.hatIndex = _hatIndex;
     }
     
     public void SwitchClothes(int changeValue) {
@@ -39,6 +41,7 @@ public class CatEditor : MonoBehaviour
         if (_clothesIndex >= clothes.Count) _clothesIndex = 0;
         if (_clothesIndex < 0) _clothesIndex = clothes.Count - 1;
         cat.Clothes = clothes[_clothesIndex];
+        cat.clotheIndex = _clothesIndex;
     }
     
     public void SwitchFur(int changeValue) {
@@ -46,6 +49,7 @@ public class CatEditor : MonoBehaviour
         if (_furIndex >= furs.Count) _furIndex = 0;
         if (_furIndex < 0) _furIndex = furs.Count - 1;
         cat.FurCat = furs[_furIndex];
+        cat.furIndex = _furIndex;
     }
     
     public void SwitchEyePatch(int changeValue) {
@@ -62,6 +66,8 @@ public class CatEditor : MonoBehaviour
             if (_eyePatchesIndex - 1 < 0) cat.Eyepatches[eyePatches.Count - 1].SetActive(false);
             else cat.Eyepatches[_eyePatchesIndex - 1].SetActive(false);
         }
+
+        cat.EyepatchIndex = _eyePatchesIndex;
     }
 
     public void ValidateCat() {

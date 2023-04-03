@@ -1,0 +1,307 @@
+{
+    "hiredCats": [
+        {
+            "hp": 0,
+            "maxHp": 0,
+            "NavigateurStat": 5,
+            "CanonnierStat": 6,
+            "EscrimeurStat": 4,
+            "Name": "",
+            "Hats": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "hatIndex": 0,
+            "Eyepatches": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "EyepatchIndex": 0,
+            "FurCat": {
+                "Face": {
+                    "$id": "14"
+                },
+                "Ear": {
+
+                },
+                "LeftHand": {
+                    "$id": "16"
+                },
+                "RightHand": {
+                    "$ref": "16"
+                },
+                "Tail": {
+                    "$ref": "14"
+                }
+            },
+            "furIndex": 0,
+            "Clothes": {
+
+            },
+            "clotheIndex": 0,
+            "Body": {
+
+            },
+            "Face": {
+
+            },
+            "Ear": {
+
+            },
+            "LeftHand": {
+
+            },
+            "RightHand": {
+
+            },
+            "Tail": {
+
+            }
+        }
+    ],
+    "team": [
+        {
+            "hp": 250,
+            "maxHp": 15,
+            "NavigateurStat": 6,
+            "CanonnierStat": 6,
+            "EscrimeurStat": 2,
+            "Name": "Francis",
+            "Hats": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "hatIndex": 0,
+            "Eyepatches": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "EyepatchIndex": 0,
+            "FurCat": {
+                "Face": {
+                    "$ref": "16"
+                },
+                "Ear": {
+                    "$ref": "16"
+                },
+                "LeftHand": {
+                    "$ref": "16"
+                },
+                "RightHand": {
+                    "$ref": "16"
+                },
+                "Tail": {
+                    "$ref": "16"
+                },
+                "$id": "36"
+            },
+            "furIndex": 0,
+            "Clothes": {
+                "$id": "37"
+            },
+            "clotheIndex": 0,
+            "Body": {
+
+            },
+            "Face": {
+
+            },
+            "Ear": {
+
+            },
+            "LeftHand": {
+
+            },
+            "RightHand": {
+
+            },
+            "Tail": {
+
+            }
+        },
+        {
+            "hp": 250,
+            "maxHp": 15,
+            "NavigateurStat": 6,
+            "CanonnierStat": 6,
+            "EscrimeurStat": 2,
+            "Name": "G\u00e9rard",
+            "Hats": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "hatIndex": 0,
+            "Eyepatches": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "EyepatchIndex": 0,
+            "FurCat": {
+                "$ref": "36"
+            },
+            "furIndex": 0,
+            "Clothes": {
+                "$ref": "37"
+            },
+            "clotheIndex": 0,
+            "Body": {
+
+            },
+            "Face": {
+
+            },
+            "Ear": {
+
+            },
+            "LeftHand": {
+
+            },
+            "RightHand": {
+
+            },
+            "Tail": {
+
+            }
+        },
+        {
+            "hp": 250,
+            "maxHp": 15,
+            "NavigateurStat": 6,
+            "CanonnierStat": 6,
+            "EscrimeurStat": 2,
+            "Name": "S\u00e9bastien",
+            "Hats": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "hatIndex": 0,
+            "Eyepatches": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "EyepatchIndex": 0,
+            "FurCat": {
+                "Face": {
+                    "$ref": "14"
+                },
+                "Ear": {
+                    "$ref": "14"
+                },
+                "LeftHand": {
+                    "$ref": "14"
+                },
+                "RightHand": {
+                    "$ref": "14"
+                },
+                "Tail": {
+                    "$ref": "14"
+                }
+            },
+            "furIndex": 0,
+            "Clothes": {
+                "$ref": "37"
+            },
+            "clotheIndex": 0,
+            "Body": {
+
+            },
+            "Face": {
+
+            },
+            "Ear": {
+
+            },
+            "LeftHand": {
+
+            },
+            "RightHand": {
+
+            },
+            "Tail": {
+
+            }
+        }
+    ],
+    "name": "2nde Save",
+    "gold": 50
+}

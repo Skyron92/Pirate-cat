@@ -1,0 +1,228 @@
+{
+    "hiredCats": [],
+    "team": [
+        {
+            "hp": 250,
+            "maxHp": 15,
+            "NavigateurStat": 6,
+            "CanonnierStat": 6,
+            "EscrimeurStat": 2,
+            "Name": "Francis",
+            "Hats": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "hatIndex": 0,
+            "Eyepatches": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "EyepatchIndex": 0,
+            "FurCat": {
+                "Face": {
+                    "$id": "15"
+                },
+                "Ear": {
+                    "$ref": "15"
+                },
+                "LeftHand": {
+                    "$ref": "15"
+                },
+                "RightHand": {
+                    "$ref": "15"
+                },
+                "Tail": {
+                    "$ref": "15"
+                },
+                "$id": "14"
+            },
+            "furIndex": 0,
+            "Clothes": {
+                "$id": "16"
+            },
+            "clotheIndex": 0,
+            "Body": {
+
+            },
+            "Face": {
+
+            },
+            "Ear": {
+
+            },
+            "LeftHand": {
+
+            },
+            "RightHand": {
+
+            },
+            "Tail": {
+
+            }
+        },
+        {
+            "hp": 250,
+            "maxHp": 15,
+            "NavigateurStat": 6,
+            "CanonnierStat": 6,
+            "EscrimeurStat": 2,
+            "Name": "G\u00e9rard",
+            "Hats": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "hatIndex": 0,
+            "Eyepatches": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "EyepatchIndex": 0,
+            "FurCat": {
+                "$ref": "14"
+            },
+            "furIndex": 0,
+            "Clothes": {
+                "$ref": "16"
+            },
+            "clotheIndex": 0,
+            "Body": {
+
+            },
+            "Face": {
+
+            },
+            "Ear": {
+
+            },
+            "LeftHand": {
+
+            },
+            "RightHand": {
+
+            },
+            "Tail": {
+
+            }
+        },
+        {
+            "hp": 250,
+            "maxHp": 15,
+            "NavigateurStat": 6,
+            "CanonnierStat": 6,
+            "EscrimeurStat": 2,
+            "Name": "S\u00e9bastien",
+            "Hats": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "hatIndex": 0,
+            "Eyepatches": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "EyepatchIndex": 0,
+            "FurCat": {
+                "Face": {
+                    "$id": "52"
+                },
+                "Ear": {
+                    "$ref": "52"
+                },
+                "LeftHand": {
+                    "$ref": "52"
+                },
+                "RightHand": {
+                    "$ref": "52"
+                },
+                "Tail": {
+                    "$ref": "52"
+                }
+            },
+            "furIndex": 0,
+            "Clothes": {
+                "$ref": "16"
+            },
+            "clotheIndex": 0,
+            "Body": {
+
+            },
+            "Face": {
+
+            },
+            "Ear": {
+
+            },
+            "LeftHand": {
+
+            },
+            "RightHand": {
+
+            },
+            "Tail": {
+
+            }
+        }
+    ],
+    "name": "SaveTest",
+    "gold": 0
+}

@@ -24,21 +24,28 @@ public class DataManager : MonoBehaviour
         }
     }
     
-    public void DisplayAllFoundFiles()
-    {
+    public void DisplayAllFoundFiles() {
         foreach (string variableFile in CatFiles) {
             Button tempButton = Instantiate(buttonPrefab, loadPanel.transform).GetComponent<Button>();
             TextMeshProUGUI textMeshPro = tempButton.GetComponentInChildren<TextMeshProUGUI>();
-            textMeshPro.text = variableFile;
+            textMeshPro.text = variableFile.Remove(variableFile.Length - 5, 5);
             tempButton.onClick.AddListener(delegate {
-                PlayerPrefs.SetString(CatsManager.Name, textMeshPro.text);
+                PlayerPrefs.SetString(Properties.Pref.LoadedGame, textMeshPro.text);
+                Debug.Log(variableFile + " has been loaded.");
                 loadPanel.SetActive(false);
+                DestroyAllGame();
             });
         }
     }
 
+    private void DestroyAllGame() {
+        foreach (Transform child in loadPanel.GetComponent<Transform>()) {
+            Destroy(child.gameObject);
+        }
+    }
+
     public void SaveCatsManager(CatsManager catsMan) {
-        string path = CatPath + Path.DirectorySeparatorChar + catsMan + Properties.File.CatExt;
+        string path = CatPath + Path.DirectorySeparatorChar + catsMan.name + Properties.File.CatExt;
         if (!File.Exists(path)) {
             FileStream fileStream = File.Create(path);
             fileStream.Close();
@@ -47,7 +54,7 @@ public class DataManager : MonoBehaviour
         Debug.Log("Team saved at " + path);
     }
     
-    public static CatsManager LoadStory(string catManagerNameWithExtension) {
+    public CatsManager LoadGame(string catManagerNameWithExtension) {
         string path = CatPath + Path.DirectorySeparatorChar + catManagerNameWithExtension;
         foreach (var files in CatFiles) {
             if(File.Exists(path)) File.OpenRead(path);
