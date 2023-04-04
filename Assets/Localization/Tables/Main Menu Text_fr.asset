@@ -34,6 +34,38 @@ MonoBehaviour:
     m_Localized: Quitter
     m_Metadata:
       m_Items: []
+  - m_Id: 8299710675554304
+    m_Localized: Charger Partie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8300618025144320
+    m_Localized: Vide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8306115289681920
+    m_Localized: Nouvelle partie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8311579381469184
+    m_Localized: "G\xE9n\xE9ral"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8311992608493568
+    m_Localized: Graphisme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8312295655346176
+    m_Localized: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8312532570607616
+    m_Localized: Informations
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8313764861317120
+    m_Localized: Langue
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

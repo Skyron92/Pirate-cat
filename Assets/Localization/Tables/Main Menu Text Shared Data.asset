@@ -31,8 +31,40 @@ MonoBehaviour:
     m_Key: Quit
     m_Metadata:
       m_Items: []
-  - m_Id: 62820851781632
-    m_Key: New Entry
+  - m_Id: 8299710675554304
+    m_Key: Load Game Panel Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8300618025144320
+    m_Key: Game empty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8306115289681920
+    m_Key: New game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8311579381469184
+    m_Key: General settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8311992608493568
+    m_Key: Graphics settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8312295655346176
+    m_Key: Audio settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8312532570607616
+    m_Key: Info settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8313764861317120
+    m_Key: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8333493596459008
+    m_Key: New Entry 1
     m_Metadata:
       m_Items: []
   m_Metadata:
