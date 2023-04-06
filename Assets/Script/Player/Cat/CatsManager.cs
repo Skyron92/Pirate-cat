@@ -8,26 +8,19 @@ using UnityEngine;
 public class CatsManager : MonoBehaviour
 {
     public static string Name;
+    public static Cat playerCat;
+    public Cat PlayerCat => playerCat;
     public static List<Cat> HiredCats = new List<Cat>();
-    public List<Cat> hiredCats = new List<Cat>();
+    public List<Cat> hiredCats => HiredCats;
     public static List<Cat> Team = new List<Cat>();
-    public List<Cat> team = new List<Cat>();
+    public List<Cat> team => Team;
     public static int Gold;
-    public string name;
-    public int gold;
+    public string name => Name;
+    public int gold => Gold;
 
-    private void Update() {
-        Debug.Log(Team.Count);
-        Debug.Log(HiredCats.Count);
-        Name = name;
-        Gold = gold;
-        hiredCats = HiredCats;
-        team = Team;
-    }
-    
     public void SetGame(CatsManager newCatsManager) {
-        name = newCatsManager.name;
-        gold = newCatsManager.gold;
+        Name = newCatsManager.name;
+        Gold = newCatsManager.gold;
         HiredCats.Clear();
         foreach (Cat cat in newCatsManager.hiredCats) {
             HiredCats.Add(cat);

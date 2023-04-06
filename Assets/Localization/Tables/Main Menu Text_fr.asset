@@ -66,6 +66,18 @@ MonoBehaviour:
     m_Localized: Langue
     m_Metadata:
       m_Items: []
+  - m_Id: 9042806866579456
+    m_Localized: "Voulez-vous \xE9craser les donn\xE9es enregistr\xE9e ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9044141800296448
+    m_Localized: Oui
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9044290744225792
+    m_Localized: Non
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

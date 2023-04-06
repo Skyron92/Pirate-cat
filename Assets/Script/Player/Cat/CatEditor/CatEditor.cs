@@ -71,7 +71,7 @@ public class CatEditor : MonoBehaviour
     }
 
     public void ValidateCat() {
-        CatsManager.Team.Add(cat);
+        CatsManager.playerCat.SetNewCat(cat);
     }
 
 }

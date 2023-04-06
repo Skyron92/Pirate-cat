@@ -67,6 +67,18 @@ MonoBehaviour:
     m_Key: New Entry 1
     m_Metadata:
       m_Items: []
+  - m_Id: 9042806866579456
+    m_Key: Confirmation request
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9044141800296448
+    m_Key: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9044290744225792
+    m_Key: No
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

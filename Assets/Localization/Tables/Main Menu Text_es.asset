@@ -66,6 +66,18 @@ MonoBehaviour:
     m_Localized: Idioma
     m_Metadata:
       m_Items: []
+  - m_Id: 9042806866579456
+    m_Localized: "\xBFDesea sobrescribir los datos guardados?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9044141800296448
+    m_Localized: Si
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9044290744225792
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
