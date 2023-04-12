@@ -15,9 +15,12 @@ public class CatsManager : MonoBehaviour
     public static List<Cat> Team = new List<Cat>();
     public List<Cat> team => Team;
     public static int Gold;
-    public string name => Name;
+    
     public int gold => Gold;
 
+    public CatsManager(string name) {
+        Name = name;
+    }
     public void SetGame(CatsManager newCatsManager) {
         Name = newCatsManager.name;
         Gold = newCatsManager.gold;

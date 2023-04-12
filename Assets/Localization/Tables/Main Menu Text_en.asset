@@ -78,6 +78,22 @@ MonoBehaviour:
     m_Localized: No
     m_Metadata:
       m_Items: []
+  - m_Id: 11289379580149760
+    m_Localized: Choose your game name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11290397646782464
+    m_Localized: Enter text...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11291226499973120
+    m_Localized: Validate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11291571460505600
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -63,10 +63,6 @@ MonoBehaviour:
     m_Key: Language
     m_Metadata:
       m_Items: []
-  - m_Id: 8333493596459008
-    m_Key: New Entry 1
-    m_Metadata:
-      m_Items: []
   - m_Id: 9042806866579456
     m_Key: Confirmation request
     m_Metadata:
@@ -77,6 +73,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 9044290744225792
     m_Key: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11289379580149760
+    m_Key: Choose new game name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11290397646782464
+    m_Key: Enter text...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11291226499973120
+    m_Key: Validate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11291571460505600
+    m_Key: Cancel
     m_Metadata:
       m_Items: []
   m_Metadata:

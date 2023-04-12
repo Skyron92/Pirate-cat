@@ -78,6 +78,22 @@ MonoBehaviour:
     m_Localized: Non
     m_Metadata:
       m_Items: []
+  - m_Id: 11289379580149760
+    m_Localized: Choisis le nom de ta partie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11290397646782464
+    m_Localized: Entrer texte...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11291226499973120
+    m_Localized: Valider
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11291571460505600
+    m_Localized: Annuler
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

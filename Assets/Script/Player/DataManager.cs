@@ -5,28 +5,36 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using Unity.VisualScripting.FullSerializer;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class DataManager : MonoBehaviour
 {
     [SerializeField] private CatsManager catsManager;
-    private static readonly fsSerializer Serializer = new fsSerializer();
+    private static fsSerializer Serializer = new fsSerializer();
+    [SerializeField] private Button continueButton;
     [SerializeField] private List<Button> saveButtons = new List<Button>();
     [SerializeField] private List<Button> newGameButtons = new List<Button>();
     [SerializeField] private Button deleteOldGameConfirmationButton;
     [SerializeField] private GameObject confirmationPanel;
-    private static string CatPath = Application.streamingAssetsPath;
+    [SerializeField] private GameObject newGamePanel;
+    [SerializeField] private GameObject loadGamePanel;
+    private static readonly string CatPath = Application.streamingAssetsPath;
+
+    [SerializeField] private GameObject inputFieldGameObject;
+    private InputField GameNameField => inputFieldGameObject.GetComponent<InputField>();
+    
     public static List<string> CatFiles => Directory.GetFiles(CatPath, "*" + Properties.File.CatExt).Select(Path.GetFileName).ToList();
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.S)) {
             SaveCatsManager(catsManager);
         }
+
+        continueButton.interactable = CatFiles.Count > 0;
     }
     
-    public void DisplayAllFoundFilesForLoad(GameObject panel) {
-        panel.SetActive(true);
+    public void DisplayAllFoundFilesForLoad() {
+        loadGamePanel.SetActive(true);
         for (int i = 0; i < CatFiles.Count; i++) {
                 string variableFile = CatFiles[i];
                 TextMeshProUGUI tmp = saveButtons[i].GetComponentInChildren<TextMeshProUGUI>();
@@ -34,24 +42,26 @@ public class DataManager : MonoBehaviour
                 saveButtons[i].onClick.AddListener(delegate {
                     PlayerPrefs.SetString(Properties.Pref.LoadedGame, variableFile);
                     Debug.Log(variableFile + " has been loaded.");
-                    panel.SetActive(false);
+                    loadGamePanel.SetActive(false);
                     Load();
                 });
         }
-            /*Button tempButton = Instantiate(buttonPrefab, loadPanel.transform).GetComponent<Button>();
-            TextMeshProUGUI textMeshPro = tempButton.GetComponentInChildren<TextMeshProUGUI>();
-            textMeshPro.text = variableFile.Remove(variableFile.Length - 5, 5);
-            tempButton.onClick.AddListener(delegate {
-                PlayerPrefs.SetString(Properties.Pref.LoadedGame, variableFile);
-                Debug.Log(variableFile + " has been loaded.");
-                loadPanel.SetActive(false);
-                DestroyAllGame();
-                Load();
-            });*/
+
+        
+        /*Button tempButton = Instantiate(buttonPrefab, loadPanel.transform).GetComponent<Button>();
+        TextMeshProUGUI textMeshPro = tempButton.GetComponentInChildren<TextMeshProUGUI>();
+        textMeshPro.text = variableFile.Remove(variableFile.Length - 5, 5);
+        tempButton.onClick.AddListener(delegate {
+            PlayerPrefs.SetString(Properties.Pref.LoadedGame, variableFile);
+            Debug.Log(variableFile + " has been loaded.");
+            loadPanel.SetActive(false);
+            DestroyAllGame();
+            Load();
+        });*/
     }
 
-    public void DisplayAllFoundFileForNew(GameObject panel) {
-        panel.SetActive(true);
+    public void DisplayAllFoundFileForNew() {
+        newGamePanel.SetActive(true);
         for (int i = 0; i < CatFiles.Count; i++) {
             string variableFile = CatFiles[i];
             TextMeshProUGUI tmp = newGameButtons[i].GetComponentInChildren<TextMeshProUGUI>();
@@ -60,7 +70,7 @@ public class DataManager : MonoBehaviour
                 confirmationPanel.SetActive(true);
                 deleteOldGameConfirmationButton.onClick.AddListener(delegate {
                     DeleteOldGame(variableFile);
-                    GetComponentInParent<GameObject>().SetActive(false);
+                    deleteOldGameConfirmationButton.transform.parent.gameObject.SetActive(false);
                     confirmationPanel.SetActive(false);
                 });
             });
@@ -121,8 +131,16 @@ public class DataManager : MonoBehaviour
         }
     }
 
+    
+    
     public void DeleteOldGame(string nameFile) {
-        Directory.Delete(CatPath + Path.DirectorySeparatorChar + nameFile, false);
+        File.Delete(CatPath + Path.DirectorySeparatorChar + nameFile);
+        inputFieldGameObject.SetActive(true);
         Debug.Log(nameFile + " has been deleted");
+    }
+
+    public void ValidateName() {
+        catsManager = new CatsManager(GameNameField.text);
+        SaveCatsManager(catsManager);
     }
 }
