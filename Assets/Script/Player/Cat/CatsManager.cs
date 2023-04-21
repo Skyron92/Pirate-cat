@@ -8,6 +8,7 @@ using UnityEngine;
 public class CatsManager : MonoBehaviour
 {
     public static string Name;
+    public string gameName => Name;
     public static Cat playerCat;
     public Cat PlayerCat => playerCat;
     public static List<Cat> HiredCats = new List<Cat>();
@@ -15,14 +16,14 @@ public class CatsManager : MonoBehaviour
     public static List<Cat> Team = new List<Cat>();
     public List<Cat> team => Team;
     public static int Gold;
-    
+
     public int gold => Gold;
 
     public CatsManager(string name) {
         Name = name;
     }
     public void SetGame(CatsManager newCatsManager) {
-        Name = newCatsManager.name;
+        Name = newCatsManager.gameName;
         Gold = newCatsManager.gold;
         HiredCats.Clear();
         foreach (Cat cat in newCatsManager.hiredCats) {

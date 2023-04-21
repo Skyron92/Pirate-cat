@@ -91,6 +91,22 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 11291571460505600
+    m_Localized: Ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14516043998171136
+    m_Localized: Main menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14517015650635776
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14521071760707584
+    m_Localized: A game with this name is already registered
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14523295920427008
     m_Localized: Cancel
     m_Metadata:
       m_Items: []

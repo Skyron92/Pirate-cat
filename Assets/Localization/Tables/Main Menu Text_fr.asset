@@ -91,6 +91,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 11291571460505600
+    m_Localized: Ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14516043998171136
+    m_Localized: Menu principal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14517015650635776
+    m_Localized: Jouer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14523295920427008
     m_Localized: Annuler
     m_Metadata:
       m_Items: []

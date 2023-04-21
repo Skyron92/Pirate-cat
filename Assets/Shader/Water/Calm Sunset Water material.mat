@@ -57,15 +57,16 @@ Material:
     - _CastShadows: 1
     - _Cull: 2
     - _DstBlend: 10
-    - _Fade_depth: 100
+    - _Fade_depth: 0
     - _Fresnel_opacity: 0.15
     - _Fresnel_power: 6.04
     - _Gradient_Scale: 0.5
     - _Noise_power: 1.36
-    - _Normal_intensity: 0.38
+    - _Normal_intensity: 0.5
     - _Offset_speed: 0.3
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Smoothness: 0.9
     - _Smoothstep_max: 0.45
     - _Smoothtep_min: 0
     - _SrcBlend: 5

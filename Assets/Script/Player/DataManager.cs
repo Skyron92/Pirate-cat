@@ -18,18 +18,19 @@ public class DataManager : MonoBehaviour
     [SerializeField] private GameObject confirmationPanel;
     [SerializeField] private GameObject newGamePanel;
     [SerializeField] private GameObject loadGamePanel;
+    [SerializeField] private GameObject newGameCreationPanel;
+    [SerializeField] private GameObject errorPanel;
     private static readonly string CatPath = Application.streamingAssetsPath;
 
-    [SerializeField] private GameObject inputFieldGameObject;
-    private InputField GameNameField => inputFieldGameObject.GetComponent<InputField>();
+    [SerializeField] private TextMeshProUGUI GameNameField;
     
     public static List<string> CatFiles => Directory.GetFiles(CatPath, "*" + Properties.File.CatExt).Select(Path.GetFileName).ToList();
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.S)) {
+        /*if (Input.GetKeyDown(KeyCode.S)) {
             SaveCatsManager(catsManager);
-        }
-
+        }*/
+        
         continueButton.interactable = CatFiles.Count > 0;
     }
     
@@ -70,15 +71,26 @@ public class DataManager : MonoBehaviour
                 confirmationPanel.SetActive(true);
                 deleteOldGameConfirmationButton.onClick.AddListener(delegate {
                     DeleteOldGame(variableFile);
-                    deleteOldGameConfirmationButton.transform.parent.gameObject.SetActive(false);
+                    newGameCreationPanel.SetActive(true);
                     confirmationPanel.SetActive(false);
                 });
             });
         }
+        
+        if(CatFiles.Count < 4){
+            foreach (Button button in newGameButtons) {
+                TextMeshProUGUI tmp = button.GetComponentInChildren<TextMeshProUGUI>();
+                if (!CatFiles.Contains(tmp.text + Properties.File.CatExt)) {
+                    button.onClick.AddListener(delegate {
+                       newGameCreationPanel.SetActive(true);
+                    });
+                }
+            }
+        }
     }
 
     public void SaveCatsManager(CatsManager catsMan) {
-        string path = CatPath + Path.DirectorySeparatorChar + catsMan.name + Properties.File.CatExt;
+        string path = CatPath + Path.DirectorySeparatorChar + catsMan.gameName + Properties.File.CatExt;
         if (!File.Exists(path)) {
             FileStream fileStream = File.Create(path);
             fileStream.Close();
@@ -125,9 +137,6 @@ public class DataManager : MonoBehaviour
         if (PlayerPrefs.HasKey(Properties.Pref.LoadedGame) && CheckGame(PlayerPrefs.GetString(Properties.Pref.LoadedGame))) {
             catsManager.SetGame(LoadGame(PlayerPrefs.GetString(Properties.Pref.LoadedGame)));
             PlayerPrefs.DeleteKey(Properties.Pref.LoadedGame);
-            foreach (var cat in catsManager.team) {
-                Debug.Log(cat.Name);
-            }
         }
     }
 
@@ -135,11 +144,15 @@ public class DataManager : MonoBehaviour
     
     public void DeleteOldGame(string nameFile) {
         File.Delete(CatPath + Path.DirectorySeparatorChar + nameFile);
-        inputFieldGameObject.SetActive(true);
-        Debug.Log(nameFile + " has been deleted");
+        newGameCreationPanel.SetActive(true);
+        DisplayAllFoundFileForNew();
     }
 
     public void ValidateName() {
+        if (CatFiles.Contains(GameNameField.text + Properties.File.CatExt)) {
+            errorPanel.SetActive(true);
+            return;
+        }
         catsManager = new CatsManager(GameNameField.text);
         SaveCatsManager(catsManager);
     }
