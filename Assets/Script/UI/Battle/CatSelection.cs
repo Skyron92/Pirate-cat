@@ -12,13 +12,13 @@ public class CatSelection : MonoBehaviour {
     [SerializeField] private Slider life;
 
     private void Awake() {
-        life.maxValue = player.crew[index].maxHp;
-        text.text = player.crew[index].Name;
+        life.maxValue = player.Crew[index].maxHp;
+        text.text = player.Crew[index].Name;
     }
 
     private void Update() {
-        currentCatButton.interactable = player.crew[index] != player.currentCat;
-        life.value = player.crew[index].hp;
+        currentCatButton.interactable = player.Crew[index] != player.currentCat;
+        life.value = player.Crew[index].hp;
     }
 
     public void SwitchCat() {

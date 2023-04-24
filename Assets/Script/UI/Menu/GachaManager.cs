@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GachaManager : MonoBehaviour
 {
+    [SerializeField] private CatsManager catsManager;
     [SerializeField] private GameObject catPrefab;
     private Cat cat;
     private System.Random _roll = new System.Random();
@@ -14,7 +15,7 @@ public class GachaManager : MonoBehaviour
     [SerializeField] [Range(0, 500)] private int cost;
 
     public void HireCat() {
-        if (CatsManager.Gold >= cost) {
+        if (catsManager.gold >= cost) {
             GameObject newCat = Instantiate(catPrefab);
             cat = newCat.GetComponent<Cat>();
             cat.Clothes = clothList[_roll.Next(0, clothList.Count)];
@@ -32,7 +33,7 @@ public class GachaManager : MonoBehaviour
             cat.FurCat = furList[_roll.Next(0, furList.Count)];
             CreateStatistic();
             
-            CatsManager.HiredCats.Add(cat);
+            catsManager.hiredCats.Add(cat);
         }
     }
 

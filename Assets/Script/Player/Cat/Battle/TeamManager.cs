@@ -14,7 +14,8 @@ public class TeamManager : MonoBehaviour
     public Cat currentCat;
     public AITeamManager ennemy;
     public bool IsYourTurn;
-    public List<Cat> crew = CatsManager.Team;
+    [SerializeField] private CatsManager _catsManager;
+    public List<Cat> Crew => _catsManager.team;
     [SerializeField] private Button attackButton;
     [SerializeField] private Button switchButton;
     private float timer;
@@ -36,8 +37,8 @@ public class TeamManager : MonoBehaviour
     public void PutCat() {
         _currentCatGameObject = Instantiate(catPrefab, playersCatPosition);
         _catEntity = _currentCatGameObject.GetComponent<Cat>();
-        crew[0].SetNewCat(_catEntity);
-        currentCat = crew[0];
+        Crew[0].SetNewCat(_catEntity);
+        currentCat = Crew[0];
         _animator = _currentCatGameObject.GetComponent<Animator>();
     }
     
@@ -45,8 +46,8 @@ public class TeamManager : MonoBehaviour
         Destroy(_currentCatGameObject);
         _currentCatGameObject = Instantiate(catPrefab, playersCatPosition);
         _catEntity = _currentCatGameObject.GetComponent<Cat>();
-        crew[index].SetNewCat(_catEntity);
-        currentCat = crew[index];
+        Crew[index].SetNewCat(_catEntity);
+        currentCat = Crew[index];
         _animator = _currentCatGameObject.GetComponent<Animator>();
         IsYourTurn = !IsYourTurn;
         isSwitchingTurn = true;
