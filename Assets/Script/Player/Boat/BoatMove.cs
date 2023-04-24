@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,14 +7,36 @@ public class BoatMove : MonoBehaviour
 {
 
     [Header("Move Settings \b")]
+    [SerializeField] private CatsManager catsManager;
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private Animator _animator;
-    [Range(0, 100)] [SerializeField] private float speed;
+    [Range(0, 500)] [SerializeField] private float speed;
     [Range(0, 100)] [SerializeField] private float rotationSpeed;
     private float angle;
     private float _inputMove;
     private bool decelerate;
     private float _inputRotation;
+    [SerializeField] private GameObject catPrefab;
+
+    [SerializeField] private List<Transform> catsPositions = new List<Transform>();
+
+    private void Awake()
+    {
+        speed = 100;
+        foreach (var cat in catsManager.team)
+        {
+            speed += 135*cat.NavigateurStat/10;
+        }
+
+        for (int i = 0; i < catsManager.team.Count + 1; i++) {
+            Cat cat = Instantiate(catPrefab, catsPositions[i].position, Quaternion.identity).GetComponent<Cat>();
+            if(i == 0) cat.SetNewCat(catsManager.PlayerCat);
+            else {
+                cat.SetNewCat(catsManager.team[i]);
+            }
+        }
+      
+    }
 
     private void Update() {
         WriteMove();
