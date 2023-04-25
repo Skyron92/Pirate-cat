@@ -48,21 +48,21 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fade_depth: 0
+    - _Fade_depth: 12.17
     - _Fresnel_opacity: 0.15
     - _Fresnel_power: 6
     - _Gradient_Scale: 1
-    - _Noise_power: 0.74
-    - _Normal_intensity: 0.48
-    - _Offset_speed: 0.73
+    - _Noise_power: 0.93
+    - _Normal_intensity: 0.16
+    - _Offset_speed: 0.3
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.9
-    - _Smoothstep_max: 0.81
+    - _Smoothstep_max: 0.79
     - _Smoothtep_min: -0.09
     m_Colors:
     - _Color_from: {r: 0.3973834, g: 0.5703641, b: 0.8867924, a: 1}
     - _Color_to: {r: 0.3290762, g: 0.49550563, b: 0.8018868, a: 1}
-    - _Noise_Remap: {r: 0.2, g: 1, b: -0.6, a: 1.5}
+    - _Noise_Remap: {r: 0.12, g: 1, b: -0.6, a: 1.5}
     - _Rotate_projection: {r: -1, g: 0, b: 1, a: 20}
   m_BuildTextureStacks: []
