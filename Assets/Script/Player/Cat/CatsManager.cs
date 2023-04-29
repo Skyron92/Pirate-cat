@@ -35,10 +35,12 @@ public class CatsManager : MonoBehaviour
         gold = newCatsManager.gold;
         hiredCats.Clear();
         foreach (Cat cat in newCatsManager.hiredCats) {
+            if(cat == null) continue;
             hiredCats.Add(cat);
         }
         team.Clear();
         foreach (var cat in newCatsManager.team) {
+            if(cat == null) continue;
             team.Add(cat);
         }
     }

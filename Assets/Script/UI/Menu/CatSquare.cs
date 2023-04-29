@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class CatSquare : MonoBehaviour
@@ -17,21 +18,19 @@ public class CatSquare : MonoBehaviour
 
     private Image _image;
 
-    private void Awake()
-    {
+    private void Awake() {
         _image = GetComponent<Image>();
         _inventory = GetComponentInParent<Inventory>();
         canvas = GetComponentInParent<Canvas>();
     }
 
-    private void OnDrawGizmos()
-    {
+    private void OnDrawGizmos() {
         Gizmos.DrawWireSphere(transform.position, validRange);
     }
 
-    public void DragHandler(BaseEventData data)
-    {
+    public void DragHandler(BaseEventData data) {
         transform.SetParent(_inventory.transform);
+        HideInformationBox();
         PointerEventData pointerEventData = (PointerEventData) data;
 
         Vector2 position;
@@ -58,5 +57,17 @@ public class CatSquare : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void HideInformationBox(BaseEventData data) {
+        TooltipManager.Instance.HideToolTip();
+    }
+    
+    public void HideInformationBox() {
+        TooltipManager.Instance.HideToolTip();
+    }
+
+    public void ShowInformationBox(BaseEventData data) {
+        TooltipManager.Instance.ShowToolTip(cat);
     }
 }

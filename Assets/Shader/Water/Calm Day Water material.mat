@@ -20,15 +20,16 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Water material
+  m_Name: Calm Day Water material
   m_Shader: {fileID: -6465566751694194690, guid: 928ba1f4197871742a507d557020cce8,
     type: 3}
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2450
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -48,21 +49,34 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fade_depth: 0
+    - _AlphaClip: 0
+    - _Base_scale: -0.48
+    - _Base_speed: -0.03
+    - _Base_strenght: -0.7
+    - _Blend: 0
+    - _CastShadows: 1
+    - _Cull: 2
+    - _DstBlend: 10
+    - _Fade_depth: 0.18
     - _Fresnel_opacity: 0.15
-    - _Fresnel_power: 6
-    - _Gradient_Scale: 1
-    - _Noise_power: 0.93
-    - _Normal_intensity: 0.16
+    - _Fresnel_power: 6.04
+    - _Gradient_Scale: 0.5
+    - _Noise_power: 1.36
+    - _Normal_intensity: 0.5
     - _Offset_speed: 0.3
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 0.9
-    - _Smoothstep_max: 0.79
-    - _Smoothtep_min: -0.09
+    - _Smoothness: 0.39
+    - _Smoothstep_max: 0.45
+    - _Smoothtep_min: 0
+    - _SrcBlend: 5
+    - _Surface: 1
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _ZWriteControl: 0
     m_Colors:
-    - _Color_from: {r: 0.3973834, g: 0.5703641, b: 0.8867924, a: 1}
-    - _Color_to: {r: 0.3290762, g: 0.49550563, b: 0.8018868, a: 1}
-    - _Noise_Remap: {r: 0.12, g: 1, b: -0.6, a: 1.5}
+    - _Color_from: {r: 0.38470095, g: 0.5959115, b: 0.8962264, a: 1}
+    - _Color_to: {r: 0.2027857, g: 0.5263613, b: 0.8773585, a: 1}
+    - _Noise_Remap: {r: 0.15, g: 1, b: -0.6, a: 1.5}
     - _Rotate_projection: {r: -1, g: 0, b: 1, a: 20}
   m_BuildTextureStacks: []
