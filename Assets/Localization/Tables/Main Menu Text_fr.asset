@@ -106,6 +106,22 @@ MonoBehaviour:
     m_Localized: Annuler
     m_Metadata:
       m_Items: []
+  - m_Id: 17790468231139328
+    m_Localized: "G\xE9n\xE9ral"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17790943194124288
+    m_Localized: Musique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17791502005440512
+    m_Localized: Effets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17797196389683200
+    m_Localized: "Plein \xE9cran"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

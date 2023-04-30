@@ -1,10 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -14,9 +9,9 @@ public class Canon : MonoBehaviour
     [Header("PREFAB\b")]
     [SerializeField] private GameObject bullet;
     [SerializeField] private ParticleSystem poofEffect;
-    public Cat Tireur;
-    
-    private float ReloadingTime => 8 / Tireur.CanonnierStat;
+   /* public Cat Tireur;         En attendant de continuer cette phase...
+    private float ReloadingTime => 8 / Tireur.CanonnierStat;*/
+    private float ReloadingTime => 5;
     private float timer;
     private bool IsReloading;
     [Header("INTERFACE\b")]

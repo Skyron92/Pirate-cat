@@ -110,6 +110,22 @@ MonoBehaviour:
     m_Localized: Cancel
     m_Metadata:
       m_Items: []
+  - m_Id: 17790468231139328
+    m_Localized: Global
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17790943194124288
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17791502005440512
+    m_Localized: Effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17797196389683200
+    m_Localized: Fullscreen
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

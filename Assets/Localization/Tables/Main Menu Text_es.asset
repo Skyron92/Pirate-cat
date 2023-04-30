@@ -106,6 +106,22 @@ MonoBehaviour:
     m_Localized: Cancelar
     m_Metadata:
       m_Items: []
+  - m_Id: 17790468231139328
+    m_Localized: General
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17790943194124288
+    m_Localized: "M\xFAsica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17791502005440512
+    m_Localized: Efectos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17797196389683200
+    m_Localized: Pantalla completa
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

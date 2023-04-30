@@ -107,6 +107,22 @@ MonoBehaviour:
     m_Key: Cancel
     m_Metadata:
       m_Items: []
+  - m_Id: 17790468231139328
+    m_Key: Global Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17790943194124288
+    m_Key: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17791502005440512
+    m_Key: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17797196389683200
+    m_Key: Fulscreen
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
