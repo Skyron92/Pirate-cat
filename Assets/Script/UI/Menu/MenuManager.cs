@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -10,20 +12,29 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject webglMenu;
     [SerializeField] private GameObject appMenu;
 
+    [SerializeField] private CatsManager catsManager;
+
     [Header("Sound Settings\b")] 
     [SerializeField] private AudioMixer master;
     [SerializeField] private Slider masterSlider;
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider soundSlider;
 
-    [Header("Graphic Setttings \b")]
+    [Header("General setting\b")] 
+    [SerializeField] private TextMeshProUGUI version;
 
-    private List<string> fullscreenOptions = new List<string>();
+    [Header("Gold settings")]
+    [SerializeField] private TextMeshProUGUI gold;
+
 
     void Start() {
         webglMenu.SetActive(!isApplication);
         appMenu.SetActive(isApplication);
-        Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+        SetProjectVersion();
+    }
+
+    private void Update() {
+        gold.text = catsManager.gold.ToString();
     }
 
     public void Quit() {
@@ -31,8 +42,6 @@ public class MenuManager : MonoBehaviour
         else Application.Quit();*/
        Application.Quit();
     }
-
-    
 
     public void MasterVolume(float masterLvl) {
         master.SetFloat("GlobalVolume", masterLvl);
@@ -42,18 +51,15 @@ public class MenuManager : MonoBehaviour
         master.SetFloat("MusicVolume", musicSlider.value);
     }
     
-    public void SFXVolume(float SFXLvl) {
+    public void SFXVolume() {
         master.SetFloat("SFXVolume", soundSlider.value);
     }
 
-    public void OnFullscreenOptionSelectionChanged(int index) {
-        switch (index) {
-            case 0 :
-                Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
-                break;
-            case 1 :
-                Screen.fullScreenMode = FullScreenMode.Windowed;
-                break;
-        }
+    public void OnFullscreenToggleChanged(Toggle toggle) {
+        Screen.fullScreen = toggle.isOn;
+    }
+
+    private void SetProjectVersion() {
+        version.text = "Pirate Cat : Goldfin root - 2023 " + Application.version;
     }
 }

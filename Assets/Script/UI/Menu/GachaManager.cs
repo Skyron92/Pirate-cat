@@ -1,5 +1,8 @@
+using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GachaManager : MonoBehaviour
 {
@@ -13,6 +16,11 @@ public class GachaManager : MonoBehaviour
     [SerializeField] private List<Material> clothList = new List<Material>();
 
     [SerializeField] [Range(0, 500)] private int cost;
+    [SerializeField] private TextMeshProUGUI costText;
+
+    private void Update() {
+        costText.text = cost.ToString();
+    }
 
     public void HireCat() {
         if (catsManager.gold >= cost) {
@@ -32,9 +40,13 @@ public class GachaManager : MonoBehaviour
             cat.Hats[hatvalue].SetActive(true);
             cat.FurCat = furList[_roll.Next(0, furList.Count)];
             CreateStatistic();
-            
-            catsManager.hiredCats.Add(cat);
         }
+    }
+
+
+    public void ValidateName(TextMeshProUGUI textMeshProUGUI) {
+        cat.name = textMeshProUGUI.text;
+        catsManager.hiredCats.Add(cat);
     }
 
     private void CreateStatistic() {

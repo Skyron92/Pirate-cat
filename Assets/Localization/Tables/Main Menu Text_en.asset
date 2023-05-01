@@ -126,6 +126,54 @@ MonoBehaviour:
     m_Localized: Fullscreen
     m_Metadata:
       m_Items: []
+  - m_Id: 18141137676931072
+    m_Localized: 'Musics by '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18156231710347264
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18161460874973184
+    m_Localized: My cats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18162544364359680
+    m_Localized: Hire a cat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18162681857839104
+    m_Localized: Minigames
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18166716270776320
+    m_Localized: Coming soon...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18168124923580416
+    m_Localized: Hire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18172879850835968
+    m_Localized: A new cat has just been hired !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18174356543639552
+    m_Localized: What's his name ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18175854283460608
+    m_Localized: What do you want to do?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18177297983868928
+    m_Localized: Again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18178074303401984
+    m_Localized: Back to the tavern
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

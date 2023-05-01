@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5035019603968
-    m_Localized: Ajustes
+    m_Localized: Opciones
     m_Metadata:
       m_Items: []
   - m_Id: 5295397801984
@@ -120,6 +120,54 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 17797196389683200
     m_Localized: Pantalla completa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18141137676931072
+    m_Localized: "M\xFAsica de"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18156231710347264
+    m_Localized: Hecha por Skyron
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18161460874973184
+    m_Localized: Mis gatos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18162544364359680
+    m_Localized: Reclutar un gato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18162681857839104
+    m_Localized: Minijuegos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18166716270776320
+    m_Localized: Pronto disponible...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18168124923580416
+    m_Localized: Reclutar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18172879850835968
+    m_Localized: "\xA1Un nuevo gato acaba de ser reclutado!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18174356543639552
+    m_Localized: "\xBFC\xF3mo se llama?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18175854283460608
+    m_Localized: "\xBFQu\xE9 quieres hacer?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18177297983868928
+    m_Localized: Otra vez
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18178074303401984
+    m_Localized: Volver a la taberna
     m_Metadata:
       m_Items: []
   references:

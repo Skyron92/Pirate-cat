@@ -50,6 +50,9 @@ namespace UnityEngine.Localization.Samples
                 languageToggle.name = locale.Identifier.CultureInfo != null ? locale.Identifier.CultureInfo.NativeName : locale.ToString();
                 var label = languageToggle.GetComponentInChildren<Text>();
                 label.text = languageToggle.name;
+                char firstLetter = label.text[0];
+                firstLetter = char.ToUpper(label.text[0]);
+                label.text = firstLetter + languageToggle.name.Substring(1);
 
                 var toggle = languageToggle.GetComponent<Toggle>();
                 toggle.SetIsOnWithoutNotify(LocalizationSettings.SelectedLocale == locale);

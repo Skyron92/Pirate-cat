@@ -1,9 +1,11 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DropDown : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI label;
     Resolution[] resolutions;
     private Dropdown dropdownMenu;
 
@@ -11,25 +13,22 @@ public class DropDown : MonoBehaviour
         dropdownMenu = GetComponent<Dropdown>();
     }
 
-    void Start()
-    {
+    void Start() {
         resolutions = Screen.resolutions;
-        dropdownMenu.onValueChanged.AddListener(delegate
-        {
+        dropdownMenu.onValueChanged.AddListener(delegate {
             Screen.SetResolution(resolutions[dropdownMenu.value].width, resolutions[dropdownMenu.value].height,
-                false);
+                Screen.fullScreen);
+            label.text = ResToString(resolutions[dropdownMenu.value]);
         });
-        for (int i = 0; i < resolutions.Length; i++)
-        {
-            dropdownMenu.options[i].text = ResToString(resolutions[i]);
+        for (int i = 0; i < resolutions.Length; i++) {
+            if(dropdownMenu.options.Exists(x => x.text == ResToString(resolutions[i]))) continue;
+            dropdownMenu.options.Add(new Dropdown.OptionData(ResToString(resolutions[i])));
             dropdownMenu.value = i;
-            dropdownMenu.options.Add(new Dropdown.OptionData(dropdownMenu.options[i].text));
-
         }
+        
     }
 
-    string ResToString(Resolution res)
-    {
+    string ResToString(Resolution res) {
         return res.width + " x " + res.height;
     }
 }
