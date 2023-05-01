@@ -175,6 +175,34 @@ MonoBehaviour:
     m_Key: Return to tavern
     m_Metadata:
       m_Items: []
+  - m_Id: 18184964525658112
+    m_Key: Personalisation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18185372350418944
+    m_Key: Choose your name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18187623139774464
+    m_Key: Hat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18187902400729088
+    m_Key: Eye patch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18188440471212032
+    m_Key: Fur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18188684151885824
+    m_Key: Clothes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18189971346034688
+    m_Key: Quit advert
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

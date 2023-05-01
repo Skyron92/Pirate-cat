@@ -174,6 +174,34 @@ MonoBehaviour:
     m_Localized: Back to the tavern
     m_Metadata:
       m_Items: []
+  - m_Id: 18184964525658112
+    m_Localized: 'Customization '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18185372350418944
+    m_Localized: What is your name ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18187623139774464
+    m_Localized: Hat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18187902400729088
+    m_Localized: Eye patch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18188440471212032
+    m_Localized: Fur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18188684151885824
+    m_Localized: Clothes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18189971346034688
+    m_Localized: Do you want to leave ?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
