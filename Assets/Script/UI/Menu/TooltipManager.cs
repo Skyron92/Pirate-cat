@@ -25,6 +25,7 @@ public class TooltipManager : MonoBehaviour
     }
 
     void Update() {
+        if(!gameObject.activeSelf) return;
         transform.position = Input.mousePosition;
     }
 
