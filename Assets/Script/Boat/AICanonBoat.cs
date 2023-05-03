@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class AICanonBoat : MonoBehaviour
 {
     [Header("HP")] 
-    private float currentHP;
+    [HideInInspector] public float currentHP;
     private float nextHP;
     [Range(1,10)] [SerializeField] private int maxHP;
     private bool hit => !(nextHP == currentHP);

@@ -1,5 +1,7 @@
+using System;
 using DG.Tweening;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -9,9 +11,10 @@ public class Canon : MonoBehaviour
     [Header("PREFAB\b")]
     [SerializeField] private GameObject bullet;
     [SerializeField] private ParticleSystem poofEffect;
-   /* public Cat Tireur;         En attendant de continuer cette phase...
-    private float ReloadingTime => 8 / Tireur.CanonnierStat;*/
-    private float ReloadingTime => 5;
+    private CatsManager CatsManager => CatsManager.instance;
+    private Cat _tireur;
+    [SerializeField] private bool isRightCanon;
+    private float ReloadingTime => 8 / _tireur.CanonnierStat;
     private float timer;
     private bool IsReloading;
     [Header("INTERFACE\b")]
@@ -25,6 +28,11 @@ public class Canon : MonoBehaviour
     
     [Header("AUDIO\b")]
     [SerializeField] private AudioSource fireSFX;
+
+    private void Awake() {
+        _tireur = isRightCanon ? CatsManager.team[0] : CatsManager.team[1];
+        Debug.Log(_tireur.Name);
+    }
 
     private void Update() {
         Reload();

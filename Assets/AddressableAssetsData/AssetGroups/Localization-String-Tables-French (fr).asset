@@ -24,7 +24,7 @@ MonoBehaviour:
     - Locale-fr
     - Preload
   - m_GUID: 75a3410de96b27b44a41a2e1899b5d12
-    m_Address: Abordage Text_fr
+    m_Address: Game Text_fr
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fr

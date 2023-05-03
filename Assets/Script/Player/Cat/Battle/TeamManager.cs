@@ -14,8 +14,8 @@ public class TeamManager : MonoBehaviour
     public Cat currentCat;
     public AITeamManager ennemy;
     public bool IsYourTurn;
-    [SerializeField] private CatsManager _catsManager;
-    public List<Cat> Crew => _catsManager.team;
+    private CatsManager CatsManager => CatsManager.instance;
+    public List<Cat> Crew => CatsManager.team;
     [SerializeField] private Button attackButton;
     [SerializeField] private Button switchButton;
     private float timer;

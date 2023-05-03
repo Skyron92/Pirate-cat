@@ -206,6 +206,22 @@ MonoBehaviour:
     m_Localized: Taverne
     m_Metadata:
       m_Items: []
+  - m_Id: 18985755586990080
+    m_Localized: Mode de jeu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18987198905716736
+    m_Localized: Aventure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18987560928677888
+    m_Localized: "Verrouil\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19023330355843072
+    m_Localized: Battre en retraite
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -8,11 +8,10 @@ using UnityEngine.UI;
 
 public class BoatPlayer : MonoBehaviour 
 {
-    
     public static bool IsEnded;
     [SerializeField] private Camera _camera;
     [Range(1,10)] public int maxHp;
-    private float currentHP;
+    [HideInInspector] public float currentHP;
     private float nextHP;
     [SerializeField] private Slider sliderLife;
     private bool hit => !(nextHP == currentHP);

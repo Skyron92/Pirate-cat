@@ -211,6 +211,22 @@ MonoBehaviour:
     m_Key: Tavern
     m_Metadata:
       m_Items: []
+  - m_Id: 18985755586990080
+    m_Key: GameMode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18987198905716736
+    m_Key: Adventure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18987560928677888
+    m_Key: Locked
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19023330355843072
+    m_Key: Retreat
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -1503,12 +1503,16 @@ MonoBehaviour:
   - {fileID: 2329975268479094114}
   - {fileID: 3744314235052555449}
   - {fileID: 7083113468436465674}
+  hatIndex: 0
   Eyepatches:
   - {fileID: 6615168107465501445}
   - {fileID: 683611590318546427}
   - {fileID: 7377142157997621048}
+  EyepatchIndex: 0
   FurCat: {fileID: 11400000, guid: 0a7fb7d4c36325341a092941cbf13557, type: 2}
+  furIndex: 0
   Clothes: {fileID: 2100000, guid: 12b0dd971d9f67c47939c6e563610c37, type: 2}
+  clotheIndex: 0
   Body: {fileID: 2869923852814088670}
   Face: {fileID: 7074975805014953432}
   Ear: {fileID: 8382502644019221981}

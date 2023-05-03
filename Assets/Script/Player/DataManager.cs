@@ -93,38 +93,25 @@ public class DataManager : MonoBehaviour
     public void SaveCatsManager(CatsManager catsMan) {
         string path = CatPath + Path.DirectorySeparatorChar + catsMan.Name + Properties.File.CatExt;
         if (!File.Exists(path)) {
-            FileStream fileStream = File.Create(path);
-            fileStream.Close();
+            File.Create(path).Close();
+        }
+        else {
+            File.Delete(path);
+            File.Create(path).Close();
         }
         File.WriteAllText(path, Serialize(typeof(CatsManager), catsMan));
         Debug.Log("Team saved at " + path);
     }
 
-    public void OverWriteCatManager(CatsManager catsMan) {
-        string path = CatPath + Path.DirectorySeparatorChar + catsMan.Name + Properties.File.CatExt;
-        if (!File.Exists(path)) {
-            FileStream fileStream = File.Create(path);
-            fileStream.Close();
-        }
-        else {
-            JObject jObject = JObject.Parse(File.ReadAllText(path));
-            JArray hiredCats = (JArray) jObject["hiredCats"];
-            hiredCats.Clear();
-            foreach (var cat in catsMan.hiredCats) {
-                hiredCats.Add(JObject.FromObject(cat));
-            }
-        }
-        Debug.Log("Team saved at " + path);
-    }
-    
     public CatsManager LoadGame(string catManagerNameWithExtension) {
         string path = CatPath + Path.DirectorySeparatorChar + catManagerNameWithExtension;
-        if(File.Exists(path)) File.OpenRead(path);
+        if(File.Exists(path)) File.OpenRead(path).Close();
         else Debug.Log("Pas de sauvegarde enregistrée.");
         string fileJson = File.ReadAllText(path);
         CatsManager temp = Deserialize(typeof(CatsManager), fileJson) as CatsManager;
         temp.Name = catManagerNameWithExtension.Remove(catManagerNameWithExtension.Length - 5, 5)
             .Replace('_', ' ');
+        
         return temp;
     }
 

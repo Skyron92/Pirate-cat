@@ -49,7 +49,7 @@ public class GachaManager : MonoBehaviour
         cat.Name = textMeshProUGUI.text;
         Debug.Log(cat.Name);
         catsManager.hiredCats.Add(cat);
-        dataManager.OverWriteCatManager(catsManager);
+        dataManager.SaveCatsManager(catsManager);
     }
 
     private void CreateStatistic() {

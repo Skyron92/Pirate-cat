@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: Abordage Text_en
+  m_Name: Game Text_en
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: en
@@ -24,6 +24,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 669759967232
     m_Localized: Switch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18954312722812928
+    m_Localized: Fire !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18954449163522048
+    m_Localized: Reloading...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18954609306243072
+    m_Localized: Damn ! The enemy ship has escaped !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18955022935920640
+    m_Localized: Arf ! The boat is sinking captain!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18955839512383488
+    m_Localized: There is no cat left on board ! Let's run away !
     m_Metadata:
       m_Items: []
   references:

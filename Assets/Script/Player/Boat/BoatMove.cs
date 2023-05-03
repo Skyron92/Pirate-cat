@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 public class BoatMove : MonoBehaviour
 {
 
+    private CatsManager CatsManager => CatsManager.instance;
     [Header("Move Settings \b")]
-    [SerializeField] private CatsManager catsManager;
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private Animator _animator;
     [Range(0, 500)] [SerializeField] private float speed;
@@ -23,16 +23,16 @@ public class BoatMove : MonoBehaviour
     private void Awake()
     {
         speed = 100;
-        foreach (var cat in catsManager.team)
+        foreach (var cat in CatsManager.team)
         {
             speed += 135*cat.NavigateurStat/10;
         }
 
-        for (int i = 0; i < catsManager.team.Count + 1; i++) {
+        for (int i = 0; i < CatsManager.team.Count + 1; i++) {
             Cat cat = Instantiate(catPrefab, catsPositions[i].position, Quaternion.identity).GetComponent<Cat>();
-            if(i == 0) cat.SetNewCat(catsManager.PlayerCat);
+            if(i == 0) cat.SetNewCat(CatsManager.PlayerCat);
             else {
-                cat.SetNewCat(catsManager.team[i]);
+                cat.SetNewCat(CatsManager.team[i]);
             }
         }
       

@@ -2304,7 +2304,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4652205549634608609, guid: 91991717ffa64d84c8567b67e8bd2a3d, type: 3}
   poofEffect: {fileID: 4796354132349771976}
-  Tireur: {fileID: 0}
+  catsManager: {fileID: 0}
+  isRightCanon: 1
   ReloadingJauge: {fileID: 0}
   text: {fileID: 0}
   fireButton: {fileID: 0}
@@ -5695,7 +5696,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4652205549634608609, guid: 91991717ffa64d84c8567b67e8bd2a3d, type: 3}
   poofEffect: {fileID: 4669681167355944032}
-  Tireur: {fileID: 0}
+  catsManager: {fileID: 0}
+  isRightCanon: 0
   ReloadingJauge: {fileID: 0}
   text: {fileID: 0}
   fireButton: {fileID: 0}

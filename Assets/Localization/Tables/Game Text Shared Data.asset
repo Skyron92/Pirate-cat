@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: Abordage Text Shared Data
+  m_Name: Game Text Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: Abordage Text
+  m_TableCollectionName: Game Text
   m_TableCollectionNameGuidString: c9743c34df50501469c33717d59e0768
   m_Entries:
   - m_Id: 41021214720
@@ -21,6 +21,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 669759967232
     m_Key: Switch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18954312722812928
+    m_Key: Fire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18954449163522048
+    m_Key: Reloading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18954609306243072
+    m_Key: Navigation Game Over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18955022935920640
+    m_Key: Canon Game Over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18955839512383488
+    m_Key: Battle Game over
     m_Metadata:
       m_Items: []
   m_Metadata:

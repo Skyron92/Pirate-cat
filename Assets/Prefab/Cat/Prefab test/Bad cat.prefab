@@ -306,7 +306,7 @@ MonoBehaviour:
   maxHp: 15
   NavigateurStat: 6
   CanonnierStat: 6
-  EscrimeurStat: 6
+  EscrimeurStat: 2
   Name: Jacques
   Hats:
   - {fileID: 4207718623406866615}
@@ -314,12 +314,16 @@ MonoBehaviour:
   - {fileID: 4795749636996696806}
   - {fileID: 5849658315998444349}
   - {fileID: 41683449227054990}
+  hatIndex: 0
   Eyepatches:
   - {fileID: 4113365993793301633}
   - {fileID: 7756603550188640895}
   - {fileID: 340179548643555516}
+  EyepatchIndex: 0
   FurCat: {fileID: 11400000, guid: 0a7fb7d4c36325341a092941cbf13557, type: 2}
+  furIndex: 0
   Clothes: {fileID: 2100000, guid: 12b0dd971d9f67c47939c6e563610c37, type: 2}
+  clotheIndex: 0
   Body: {fileID: 4975444332370116186}
   Face: {fileID: 69539477154400860}
   Ear: {fileID: 1624939053411996249}

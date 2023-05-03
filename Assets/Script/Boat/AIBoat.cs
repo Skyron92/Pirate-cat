@@ -4,17 +4,17 @@ using Random = UnityEngine.Random;
 
 public class AIBoat : MonoBehaviour
 {
-
     [Header("AI SETTINGS \b")] [SerializeField]
     private bool showFields;
     [Range(0, 30)] [SerializeField] private int fieldOfView;
-    [Range(0, 30)] [SerializeField] private int fieldOfDefeat;
+    [Range(0, 30)] public int fieldOfDefeat;
+    [Range(0, 30)] public int fieldOfEscape;
     [Range(0,100)] [SerializeField] private float speedRun;
     [Range(0,100)] [SerializeField] private float speedCalm;
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private Transform player;
     [SerializeField] private Animator _animator;
-    private float DistanceWithPlayer => Vector3.Distance(transform.position, player.position);
+    public float DistanceWithPlayer => Vector3.Distance(transform.position, player.position);
     private Vector3 DirectionOfPlayer => player.transform.position - transform.position;
     private Vector3 target;
     private Vector3 DirectionPatroil => target - transform.position;

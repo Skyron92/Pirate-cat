@@ -210,6 +210,22 @@ MonoBehaviour:
     m_Localized: Tavern
     m_Metadata:
       m_Items: []
+  - m_Id: 18985755586990080
+    m_Localized: Game mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18987198905716736
+    m_Localized: Adventure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18987560928677888
+    m_Localized: Locked
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19023330355843072
+    m_Localized: Retreat
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

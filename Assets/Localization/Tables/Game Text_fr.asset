@@ -10,20 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: Abordage Text_es
+  m_Name: Game Text_fr
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: es
+    m_Code: fr
   m_SharedData: {fileID: 11400000, guid: c9743c34df50501469c33717d59e0768, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
   - m_Id: 41021214720
-    m_Localized: Atacar !
+    m_Localized: Attaquer !
     m_Metadata:
       m_Items: []
   - m_Id: 669759967232
-    m_Localized: Cambiar
+    m_Localized: Changer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18954312722812928
+    m_Localized: Feu !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18954449163522048
+    m_Localized: Rechargement...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18954609306243072
+    m_Localized: "Mince ! Le b\xE2teau ennemi s'est \xE9chapp\xE9 !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18955022935920640
+    m_Localized: Arf ! Le bateau coule chapitaine !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18955839512383488
+    m_Localized: "Il ne reste plus de chat \xE0 bord ! Fuyons !"
     m_Metadata:
       m_Items: []
   references:

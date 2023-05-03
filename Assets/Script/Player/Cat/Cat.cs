@@ -5,20 +5,20 @@ using UnityEngine;
 [Serializable]
 public class Cat : MonoBehaviour {
 
-    public int hp;
-    public int maxHp;
-    public int NavigateurStat;
-    public int CanonnierStat;
-    public int EscrimeurStat;
+    [HideInInspector] public int hp;
+    public int maxHp = 15;
+    [HideInInspector] public int NavigateurStat;
+    [HideInInspector] public int CanonnierStat;
+    [HideInInspector] public int EscrimeurStat;
     public string Name;
     public List<GameObject> Hats = new List<GameObject>();
-    public int hatIndex;
+    [HideInInspector] public int hatIndex;
     public List<GameObject> Eyepatches = new List<GameObject>();
-    public int EyepatchIndex;
+    [HideInInspector] public int EyepatchIndex;
     public Fur FurCat;
-    public int furIndex;
+    [HideInInspector] public int furIndex;
     public Material Clothes;
-    public int clotheIndex;
+    [HideInInspector] public int clotheIndex;
     [SerializeField] private MeshRenderer Body;
     [SerializeField] private MeshRenderer Face;
     [SerializeField] private MeshRenderer Ear;
@@ -33,6 +33,7 @@ public class Cat : MonoBehaviour {
         hp = maxHp;
         for(int i = 0; i < Hats.Count; i++) Hats[i].SetActive(i == hatIndex);
         for(int i = 0; i < Eyepatches.Count; i++) Eyepatches[i].SetActive(i == EyepatchIndex);
+        SetNewCat(this);
     }
 
     private void Update() {
