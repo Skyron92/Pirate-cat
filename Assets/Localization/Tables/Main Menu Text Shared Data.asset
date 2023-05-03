@@ -203,6 +203,14 @@ MonoBehaviour:
     m_Key: Quit advert
     m_Metadata:
       m_Items: []
+  - m_Id: 18868761554456576
+    m_Key: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18869771911958528
+    m_Key: Tavern
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

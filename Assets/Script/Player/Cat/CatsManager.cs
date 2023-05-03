@@ -7,9 +7,8 @@ using UnityEngine;
 [Serializable]
 public class CatsManager : MonoBehaviour
 {
-    public static string Name;
-    public string gameName => Name;
-    public static Cat playerCat;
+    public string Name;
+    public Cat playerCat;
     public Cat PlayerCat => playerCat;
     public List<Cat> hiredCats;
    
@@ -20,28 +19,26 @@ public class CatsManager : MonoBehaviour
         Name = name;
     }
 
-    private void Awake()
+    private void Update()
     {
-        Debug.Log(team.Count);
+        Debug.Log("Team : " + team.Count);
         foreach (var VARIABLE in team)
         {
             Debug.Log(VARIABLE.Name);
         }
-        Debug.Log(hiredCats.Count);
+        Debug.Log("Stock : "+hiredCats.Count);
+        foreach (var VARIABLE in hiredCats)
+        {
+            Debug.Log(VARIABLE.Name);
+        }
     }
 
     public void SetGame(CatsManager newCatsManager) {
-        Name = newCatsManager.gameName;
+        Name = newCatsManager.Name;
         gold = newCatsManager.gold;
         hiredCats.Clear();
-        foreach (Cat cat in newCatsManager.hiredCats) {
-            if(cat == null) continue;
-            hiredCats.Add(cat);
-        }
+        hiredCats = newCatsManager.hiredCats;
         team.Clear();
-        foreach (var cat in newCatsManager.team) {
-            if(cat == null) continue;
-            team.Add(cat);
-        }
+        team = newCatsManager.team;
     }
 }

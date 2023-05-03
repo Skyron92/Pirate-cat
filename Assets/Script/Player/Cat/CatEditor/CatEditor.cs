@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class CatEditor : MonoBehaviour
 {
+    [Header("Cats manager")] [SerializeField]
+    private CatsManager catsManager;
     [Header("Personalisation Asset")]
     [SerializeField] private Cat cat;
     [SerializeField] private List<GameObject> hats = new List<GameObject>();
@@ -17,6 +19,7 @@ public class CatEditor : MonoBehaviour
     private int _eyePatchesIndex;
     private int _clothesIndex;
     private int _furIndex;
+    [SerializeField] private TextMeshProUGUI textMeshProUGUI;
 
     public void SwitchHat(int changeValue) {
         _hatIndex += changeValue;
@@ -71,7 +74,9 @@ public class CatEditor : MonoBehaviour
     }
 
     public void ValidateCat() {
-        CatsManager.playerCat.SetNewCat(cat);
+        catsManager.playerCat = new Cat();
+        catsManager.playerCat.SetNewCat(cat);
+        catsManager.playerCat.SetName(textMeshProUGUI.text);
     }
 
 }

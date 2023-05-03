@@ -1,0 +1,184 @@
+{
+    "playerCat": {
+        "hp": 0,
+        "maxHp": 0,
+        "NavigateurStat": 0,
+        "CanonnierStat": 0,
+        "EscrimeurStat": 0,
+        "Name": "Skyron\u200b",
+        "Hats": [],
+        "hatIndex": 0,
+        "Eyepatches": [],
+        "EyepatchIndex": 0,
+        "FurCat": null,
+        "furIndex": 0,
+        "Clothes": null,
+        "clotheIndex": 0,
+        "Body": null,
+        "Face": null,
+        "Ear": null,
+        "LeftHand": null,
+        "RightHand": null,
+        "Tail": null
+    },
+    "hiredCats": [
+        {
+            "hp": 0,
+            "maxHp": 0,
+            "NavigateurStat": 5,
+            "CanonnierStat": 9,
+            "EscrimeurStat": 1,
+            "Name": "Peach\u200b",
+            "Hats": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "hatIndex": 0,
+            "Eyepatches": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "EyepatchIndex": 0,
+            "FurCat": {
+                "Face": {
+                    "$id": "17"
+                },
+                "Ear": {
+
+                },
+                "LeftHand": {
+                    "$id": "19"
+                },
+                "RightHand": {
+                    "$ref": "19"
+                },
+                "Tail": {
+                    "$ref": "17"
+                }
+            },
+            "furIndex": 0,
+            "Clothes": {
+
+            },
+            "clotheIndex": 0,
+            "Body": {
+
+            },
+            "Face": {
+
+            },
+            "Ear": {
+
+            },
+            "LeftHand": {
+
+            },
+            "RightHand": {
+
+            },
+            "Tail": {
+
+            }
+        },
+        {
+            "hp": 0,
+            "maxHp": 0,
+            "NavigateurStat": 8,
+            "CanonnierStat": 1,
+            "EscrimeurStat": 6,
+            "Name": "Mario\u200b",
+            "Hats": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "hatIndex": 0,
+            "Eyepatches": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "EyepatchIndex": 0,
+            "FurCat": {
+                "Face": {
+                    "$ref": "19"
+                },
+                "Ear": {
+                    "$ref": "19"
+                },
+                "LeftHand": {
+                    "$ref": "19"
+                },
+                "RightHand": {
+                    "$ref": "19"
+                },
+                "Tail": {
+                    "$ref": "19"
+                }
+            },
+            "furIndex": 0,
+            "Clothes": {
+
+            },
+            "clotheIndex": 0,
+            "Body": {
+
+            },
+            "Face": {
+
+            },
+            "Ear": {
+
+            },
+            "LeftHand": {
+
+            },
+            "RightHand": {
+
+            },
+            "Tail": {
+
+            }
+        }
+    ],
+    "team": [],
+    "gold": 620
+}

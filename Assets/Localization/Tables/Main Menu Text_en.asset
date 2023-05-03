@@ -202,6 +202,14 @@ MonoBehaviour:
     m_Localized: Do you want to leave ?
     m_Metadata:
       m_Items: []
+  - m_Id: 18868761554456576
+    m_Localized: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18869771911958528
+    m_Localized: Tavern
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

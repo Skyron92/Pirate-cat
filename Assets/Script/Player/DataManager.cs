@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Newtonsoft.Json.Linq;
 using TMPro;
 using UnityEngine;
 using Unity.VisualScripting.FullSerializer;
@@ -39,7 +40,7 @@ public class DataManager : MonoBehaviour
         for (int i = 0; i < CatFiles.Count; i++) {
                 string variableFile = CatFiles[i];
                 TextMeshProUGUI tmp = saveButtons[i].GetComponentInChildren<TextMeshProUGUI>();
-                tmp.text = variableFile.Remove(variableFile.Length - 5, 5);
+                tmp.text = variableFile.Remove(variableFile.Length - 5, 5).Replace('_', ' ');
                 saveButtons[i].onClick.AddListener(delegate {
                     PlayerPrefs.SetString(Properties.Pref.LoadedGame, variableFile);
                     Debug.Log(variableFile + " has been loaded.");
@@ -66,7 +67,7 @@ public class DataManager : MonoBehaviour
         for (int i = 0; i < CatFiles.Count; i++) {
             string variableFile = CatFiles[i];
             TextMeshProUGUI tmp = newGameButtons[i].GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = variableFile.Remove(variableFile.Length - 5, 5);
+            tmp.text = variableFile.Remove(variableFile.Length - 5, 5).Replace('_', ' ');
             newGameButtons[i].onClick.AddListener(delegate {
                 confirmationPanel.SetActive(true);
                 deleteOldGameConfirmationButton.onClick.AddListener(delegate {
@@ -90,7 +91,7 @@ public class DataManager : MonoBehaviour
     }
 
     public void SaveCatsManager(CatsManager catsMan) {
-        string path = CatPath + Path.DirectorySeparatorChar + catsMan.gameName + Properties.File.CatExt;
+        string path = CatPath + Path.DirectorySeparatorChar + catsMan.Name + Properties.File.CatExt;
         if (!File.Exists(path)) {
             FileStream fileStream = File.Create(path);
             fileStream.Close();
@@ -98,15 +99,33 @@ public class DataManager : MonoBehaviour
         File.WriteAllText(path, Serialize(typeof(CatsManager), catsMan));
         Debug.Log("Team saved at " + path);
     }
+
+    public void OverWriteCatManager(CatsManager catsMan) {
+        string path = CatPath + Path.DirectorySeparatorChar + catsMan.Name + Properties.File.CatExt;
+        if (!File.Exists(path)) {
+            FileStream fileStream = File.Create(path);
+            fileStream.Close();
+        }
+        else {
+            JObject jObject = JObject.Parse(File.ReadAllText(path));
+            JArray hiredCats = (JArray) jObject["hiredCats"];
+            hiredCats.Clear();
+            foreach (var cat in catsMan.hiredCats) {
+                hiredCats.Add(JObject.FromObject(cat));
+            }
+        }
+        Debug.Log("Team saved at " + path);
+    }
     
     public CatsManager LoadGame(string catManagerNameWithExtension) {
         string path = CatPath + Path.DirectorySeparatorChar + catManagerNameWithExtension;
-        foreach (var files in CatFiles) {
-            if(File.Exists(path)) File.OpenRead(path);
-            else Debug.Log("Pas de sauvegarde enregistrée.");
-        }
+        if(File.Exists(path)) File.OpenRead(path);
+        else Debug.Log("Pas de sauvegarde enregistrée.");
         string fileJson = File.ReadAllText(path);
-        return Deserialize(typeof(CatsManager), fileJson) as CatsManager;
+        CatsManager temp = Deserialize(typeof(CatsManager), fileJson) as CatsManager;
+        temp.Name = catManagerNameWithExtension.Remove(catManagerNameWithExtension.Length - 5, 5)
+            .Replace('_', ' ');
+        return temp;
     }
 
     private string Serialize(Type type, object value) {
@@ -137,6 +156,7 @@ public class DataManager : MonoBehaviour
         if (PlayerPrefs.HasKey(Properties.Pref.LoadedGame) && CheckGame(PlayerPrefs.GetString(Properties.Pref.LoadedGame))) {
             catsManager.SetGame(LoadGame(PlayerPrefs.GetString(Properties.Pref.LoadedGame)));
             PlayerPrefs.DeleteKey(Properties.Pref.LoadedGame);
+            Debug.Log(catsManager.Name + " has been loaded");
         }
     }
 

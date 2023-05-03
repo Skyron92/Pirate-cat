@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 2781465}
   - component: {fileID: 2781467}
   - component: {fileID: 2781466}
+  - component: {fileID: 2781468}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -258,6 +259,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2781464}
   m_CullTransparentMesh: 1
+--- !u!114 &2781468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2781464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 332bc0b98d9c8044289d870eef8adb76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &14314924
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +479,7 @@ RectTransform:
   - {fileID: 1490084790}
   - {fileID: 880854118}
   m_Father: {fileID: 1271531977}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0.1}
   m_AnchorMax: {x: 0.9, y: 0.9}
@@ -942,7 +955,7 @@ RectTransform:
   - {fileID: 671972437}
   - {fileID: 887911781}
   m_Father: {fileID: 1271531977}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2, y: 0.1}
   m_AnchorMax: {x: 0.8, y: 0.9}
@@ -2853,6 +2866,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571af6a79e76282459d3020fe8462c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
+  playerCat: {fileID: 0}
   hiredCats: []
   team: []
   gold: 620
@@ -8428,7 +8443,7 @@ RectTransform:
   m_Children:
   - {fileID: 1014400434}
   m_Father: {fileID: 1271531977}
-  m_RootOrder: 7
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05, y: 0.1}
   m_AnchorMax: {x: 0.95, y: 0.9}
@@ -10760,6 +10775,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1244667102}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1591819014}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1477361457}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &607167015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10869,7 +10920,7 @@ RectTransform:
   - {fileID: 1879211464}
   - {fileID: 271038582}
   m_Father: {fileID: 1271531977}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0.1}
   m_AnchorMax: {x: 0.9, y: 0.9}
@@ -15077,6 +15128,7 @@ GameObject:
   - component: {fileID: 865707203}
   - component: {fileID: 865707205}
   - component: {fileID: 865707204}
+  - component: {fileID: 865707206}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -15201,6 +15253,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865707202}
   m_CullTransparentMesh: 1
+--- !u!114 &865707206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865707202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 332bc0b98d9c8044289d870eef8adb76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &867507366
 GameObject:
   m_ObjectHideFlags: 0
@@ -17329,7 +17393,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1752440746}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: MusicVolume
-        m_Mode: 4
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18364,7 +18428,7 @@ GameObject:
   - component: {fileID: 1031493564}
   - component: {fileID: 1031493563}
   m_Layer: 0
-  m_Name: Cost
+  m_Name: Gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21918,6 +21982,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1477361457}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 607167014}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1591819014}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1244667103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22594,12 +22694,12 @@ RectTransform:
   m_Children:
   - {fileID: 1755409542}
   - {fileID: 957746257}
+  - {fileID: 431262712}
   - {fileID: 62954344}
   - {fileID: 1426101792}
   - {fileID: 25791866}
   - {fileID: 613217738}
   - {fileID: 2025103721}
-  - {fileID: 431262712}
   m_Father: {fileID: 1752440745}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22681,6 +22781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3330154189c1410380b907f4f9fc4177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  catsManager: {fileID: 197800610}
   cat: {fileID: 5866666019976963942}
   hats:
   - {fileID: 4982831433004018675}
@@ -22701,6 +22802,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 436d5b9dd817f614d8bec183728786a3, type: 2}
   - {fileID: 11400000, guid: 8eda2d96661013e42be905ccf6fc220b, type: 2}
   - {fileID: 11400000, guid: f7cc1bfe43e0d0342bedab939dc4226a, type: 2}
+  textMeshProUGUI: {fileID: 1811177734}
 --- !u!1 &1280451165
 GameObject:
   m_ObjectHideFlags: 0
@@ -24581,7 +24683,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:98dd0b4850d6be343b138b499bd8a706
     m_TableEntryReference:
-      m_KeyId: 4854983299072
+      m_KeyId: 18869771911958528
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -25013,7 +25115,7 @@ RectTransform:
   - {fileID: 397866487}
   - {fileID: 828312497}
   m_Father: {fileID: 1271531977}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05, y: 0.05}
   m_AnchorMax: {x: 0.95, y: 0.95}
@@ -25071,6 +25173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catsManager: {fileID: 197800610}
+  dataManager: {fileID: 1765716564}
   catPrefab: {fileID: 5325501166304595028, guid: cfd95da6b7e498847a3a32cddec573ae,
     type: 3}
   furList:
@@ -25666,6 +25769,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1426101795}
+        m_TargetAssemblyTypeName: GachaManager, Assembly-CSharp
+        m_MethodName: UpdateCostDisplay
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 357345974}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1935145403}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -26041,6 +26156,42 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1244667102}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 607167014}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1591819014}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1477361458
 MonoBehaviour:
@@ -27317,6 +27468,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1426101795}
+        m_TargetAssemblyTypeName: GachaManager, Assembly-CSharp
+        m_MethodName: UpdateCostDisplay
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1648772257}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 369422409}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -29179,6 +29342,42 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1244667102}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1477361457}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 607167014}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1591819015
 MonoBehaviour:
@@ -33101,6 +33300,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 957746256}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1810114282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33150,6 +33361,7 @@ GameObject:
   - component: {fileID: 1811177733}
   - component: {fileID: 1811177735}
   - component: {fileID: 1811177734}
+  - component: {fileID: 1811177736}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -33274,6 +33486,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811177732}
   m_CullTransparentMesh: 1
+--- !u!114 &1811177736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811177732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 332bc0b98d9c8044289d870eef8adb76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1814747335
 GameObject:
   m_ObjectHideFlags: 0
@@ -35695,7 +35919,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1752440746}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: SFXVolume
-        m_Mode: 4
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -37118,7 +37342,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:98dd0b4850d6be343b138b499bd8a706
     m_TableEntryReference:
-      m_KeyId: 18141137676931072
+      m_KeyId: 18868761554456576
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -37833,7 +38057,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1271531977}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

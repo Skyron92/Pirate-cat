@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class GachaManager : MonoBehaviour
 {
     [SerializeField] private CatsManager catsManager;
+    [SerializeField] private DataManager dataManager;
     [SerializeField] private GameObject catPrefab;
     private Cat cat;
     private System.Random _roll = new System.Random();
@@ -18,8 +19,8 @@ public class GachaManager : MonoBehaviour
     [SerializeField] [Range(0, 500)] private int cost;
     [SerializeField] private TextMeshProUGUI costText;
 
-    private void Update() {
-        costText.text = cost.ToString();
+    public void UpdateCostDisplay(TextMeshProUGUI textMeshProUGUI) {
+        textMeshProUGUI.text = cost.ToString();
     }
 
     public void HireCat() {
@@ -45,8 +46,10 @@ public class GachaManager : MonoBehaviour
 
 
     public void ValidateName(TextMeshProUGUI textMeshProUGUI) {
-        cat.name = textMeshProUGUI.text;
+        cat.Name = textMeshProUGUI.text;
+        Debug.Log(cat.Name);
         catsManager.hiredCats.Add(cat);
+        dataManager.OverWriteCatManager(catsManager);
     }
 
     private void CreateStatistic() {
