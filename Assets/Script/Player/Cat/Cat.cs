@@ -33,7 +33,7 @@ public class Cat : MonoBehaviour {
         hp = maxHp;
         for(int i = 0; i < Hats.Count; i++) Hats[i].SetActive(i == hatIndex);
         for(int i = 0; i < Eyepatches.Count; i++) Eyepatches[i].SetActive(i == EyepatchIndex);
-        SetNewCat(this);
+        Replace(this);
     }
 
     private void Update() {
@@ -54,22 +54,22 @@ public class Cat : MonoBehaviour {
         Name = name;
     }
 
-    public void SetNewCat(Cat newCat) {
-        newCat.NavigateurStat = NavigateurStat;
-        newCat.CanonnierStat = CanonnierStat;
-        newCat.EscrimeurStat = EscrimeurStat;
-        newCat.Name = Name;
-        newCat.FurCat = FurCat;
-        newCat.furIndex = furIndex;
-        newCat.clotheIndex = clotheIndex;
-        newCat.hatIndex = hatIndex;
-        newCat.EyepatchIndex = EyepatchIndex;
-        newCat.Clothes = Clothes;
+    public void Replace(Cat catToReplace) {
+        catToReplace.NavigateurStat = NavigateurStat;
+        catToReplace.CanonnierStat = CanonnierStat;
+        catToReplace.EscrimeurStat = EscrimeurStat;
+        catToReplace.Name = Name;
+        catToReplace.FurCat = FurCat;
+        catToReplace.furIndex = furIndex;
+        catToReplace.clotheIndex = clotheIndex;
+        catToReplace.hatIndex = hatIndex;
+        catToReplace.EyepatchIndex = EyepatchIndex;
+        catToReplace.Clothes = Clothes;
         for (int i = 0; i < Hats.Count; i++) {
-            newCat.Hats[i].SetActive(Hats[i].activeSelf);
+            catToReplace.Hats[i].SetActive(Hats[i].activeSelf);
         }
         for (int i = 0; i < Eyepatches.Count; i++) {
-            newCat.Eyepatches[i].SetActive(Eyepatches[i].activeSelf);
+            catToReplace.Eyepatches[i].SetActive(Eyepatches[i].activeSelf);
         }
     }
 }

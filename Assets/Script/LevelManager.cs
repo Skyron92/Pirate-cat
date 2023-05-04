@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -13,7 +14,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<GameObject> gameOverTextList = new List<GameObject>();
 
     [Header("Player Settings")]
-    [SerializeField] private BoatMove boatMove;
+    //[SerializeField] private BoatMove boatMove;
     [SerializeField] private BoatPlayer boatPlayer;
     [SerializeField] private TeamManager teamManager;
     
@@ -24,6 +25,7 @@ public class LevelManager : MonoBehaviour
 
     private void Awake() {
         _currentIndex = 0;
+       // boatMove.enabled = true;
     }
 
     private void OnDestroy() {

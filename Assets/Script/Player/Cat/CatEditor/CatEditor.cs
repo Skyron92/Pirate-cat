@@ -75,7 +75,7 @@ public class CatEditor : MonoBehaviour
 
     public void ValidateCat() {
         catsManager.playerCat = new Cat();
-        catsManager.playerCat.SetNewCat(cat);
+        catsManager.playerCat.Replace(cat);
         catsManager.playerCat.SetName(textMeshProUGUI.text);
     }
 

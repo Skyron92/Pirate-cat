@@ -160,7 +160,7 @@ public class DataManager : MonoBehaviour
             errorPanel.SetActive(true);
             return;
         }
-        catsManager = new CatsManager(GameNameField.text);
+        catsManager.Name = GameNameField.text;
         SaveCatsManager(catsManager);
     }
 }

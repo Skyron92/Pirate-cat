@@ -8,7 +8,7 @@ public class AIBoat : MonoBehaviour
     private bool showFields;
     [Range(0, 30)] [SerializeField] private int fieldOfView;
     [Range(0, 30)] public int fieldOfDefeat;
-    [Range(0, 30)] public int fieldOfEscape;
+    [Range(0, 100)] public int fieldOfEscape;
     [Range(0,100)] [SerializeField] private float speedRun;
     [Range(0,100)] [SerializeField] private float speedCalm;
     [SerializeField] private Rigidbody _rigidbody;
@@ -35,6 +35,9 @@ public class AIBoat : MonoBehaviour
         
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, fieldOfDefeat);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, fieldOfEscape);
     }
 
     private void RunAway() {

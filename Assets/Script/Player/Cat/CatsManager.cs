@@ -11,9 +11,7 @@ public class CatsManager : MonoBehaviour
     public static CatsManager instance = new CatsManager();
     public string Name;
     public Cat playerCat;
-    public Cat PlayerCat => playerCat;
     public List<Cat> hiredCats;
-   
     public List<Cat> team;
     public int gold;
 
@@ -29,24 +27,15 @@ public class CatsManager : MonoBehaviour
         instance = this;
     }
 
-
-    private void Update()
-    {
-        Debug.Log("Team : " + team.Count);
-        foreach (var VARIABLE in team)
-        {
-            Debug.Log(VARIABLE.Name);
-        }
-        Debug.Log("Stock : "+hiredCats.Count);
-        foreach (var VARIABLE in hiredCats)
-        {
-            Debug.Log(VARIABLE.Name);
-        }
+    private void Update() {
+        Debug.Log(Name);
     }
 
     public void SetGame(CatsManager newCatsManager) {
         Name = newCatsManager.Name;
         gold = newCatsManager.gold;
+        playerCat = new Cat();
+        newCatsManager.playerCat.Replace(playerCat);
         hiredCats.Clear();
         hiredCats = newCatsManager.hiredCats;
         team.Clear();

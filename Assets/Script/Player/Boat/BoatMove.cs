@@ -20,22 +20,19 @@ public class BoatMove : MonoBehaviour
 
     [SerializeField] private List<Transform> catsPositions = new List<Transform>();
 
-    private void Awake()
-    {
-        speed = 100;
-        foreach (var cat in CatsManager.team)
-        {
-            speed += 135*cat.NavigateurStat/10;
+    private void Awake() {
+        speed = 5;
+        foreach (var cat in CatsManager.team) {
+            speed += 5*cat.NavigateurStat/10;
         }
 
         for (int i = 0; i < CatsManager.team.Count + 1; i++) {
-            Cat cat = Instantiate(catPrefab, catsPositions[i].position, Quaternion.identity).GetComponent<Cat>();
-            if(i == 0) cat.SetNewCat(CatsManager.PlayerCat);
+            Cat cat = Instantiate(catPrefab, catsPositions[i]).GetComponent<Cat>();
+            if(i == 0) CatsManager.playerCat.Replace(cat);
             else {
-                cat.SetNewCat(CatsManager.team[i]);
+                CatsManager.team[i].Replace(cat);
             }
         }
-      
     }
 
     private void Update() {

@@ -2630,10 +2630,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7eb07391f428224d9502bff15a2db2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  catsManager: {fileID: 0}
   _rigidbody: {fileID: 5384370886047848024}
   _animator: {fileID: 2204618645515782100}
-  speed: 100
+  speed: 5
   rotationSpeed: 60
   catPrefab: {fileID: 8913578225335684845, guid: 6b05fea5398f27f4d9f72538de8ddf72,
     type: 3}

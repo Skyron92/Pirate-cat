@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AITeamManager : MonoBehaviour {
+    
     public TeamManager player;
     public bool IsYourTurn;
     [SerializeField] private Transform AIsCatPosition;
@@ -41,7 +42,7 @@ public class AITeamManager : MonoBehaviour {
     public void PutCat() {
         _currentCatGameObject = Instantiate(catPrefab, AIsCatPosition);
         _catEntity = _currentCatGameObject.GetComponent<Cat>();
-        crew[0].SetNewCat(_catEntity);
+        crew[0].Replace(_catEntity);
         _currentCat = crew[0];
         currentIndex = 0;
         _animator = _currentCatGameObject.GetComponent<Animator>();
@@ -100,7 +101,7 @@ public class AITeamManager : MonoBehaviour {
         Destroy(_currentCatGameObject);
         _currentCatGameObject = Instantiate(catPrefab, AIsCatPosition);
         _catEntity = _currentCatGameObject.GetComponent<Cat>();
-        crew[index].SetNewCat(_catEntity);
+        crew[index].Replace(_catEntity);
         _currentCat = crew[index];
         _animator = _currentCatGameObject.GetComponent<Animator>();
         Debug.Log("New cat is " + _currentCat.Name);

@@ -37,7 +37,7 @@ public class TeamManager : MonoBehaviour
     public void PutCat() {
         _currentCatGameObject = Instantiate(catPrefab, playersCatPosition);
         _catEntity = _currentCatGameObject.GetComponent<Cat>();
-        Crew[0].SetNewCat(_catEntity);
+        Crew[0].Replace(_catEntity);
         currentCat = Crew[0];
         _animator = _currentCatGameObject.GetComponent<Animator>();
     }
@@ -46,7 +46,7 @@ public class TeamManager : MonoBehaviour
         Destroy(_currentCatGameObject);
         _currentCatGameObject = Instantiate(catPrefab, playersCatPosition);
         _catEntity = _currentCatGameObject.GetComponent<Cat>();
-        Crew[index].SetNewCat(_catEntity);
+        Crew[index].Replace(_catEntity);
         currentCat = Crew[index];
         _animator = _currentCatGameObject.GetComponent<Animator>();
         IsYourTurn = !IsYourTurn;

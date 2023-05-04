@@ -35,7 +35,5 @@ public class Inventory : MonoBehaviour {
             
             catsManager.hiredCats.Add(catSquare.cat);
         }
-        
-        Debug.Log(catsManager.team.Count);
     }
 }
