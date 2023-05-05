@@ -1,169 +1,53 @@
 {
     "Name": "Mario cat\u200b",
-    "playerCat": null,
-    "hiredCats": [
-        {
-            "hp": 0,
-            "maxHp": 0,
-            "NavigateurStat": 5,
-            "CanonnierStat": 9,
-            "EscrimeurStat": 1,
-            "Name": "Peach\u200b",
-            "Hats": [
-                {
-
-                },
-                {
-
-                },
-                {
-
-                },
-                {
-
-                },
-                {
-
-                }
-            ],
-            "hatIndex": 0,
-            "Eyepatches": [
-                {
-
-                },
-                {
-
-                },
-                {
-
-                }
-            ],
-            "EyepatchIndex": 0,
-            "FurCat": {
-                "Face": {
-                    "$id": "14"
-                },
-                "Ear": {
-
-                },
-                "LeftHand": {
-                    "$id": "16"
-                },
-                "RightHand": {
-                    "$ref": "16"
-                },
-                "Tail": {
-                    "$ref": "14"
-                }
-            },
-            "furIndex": 0,
-            "Clothes": {
-
-            },
-            "clotheIndex": 0,
-            "Body": {
-
-            },
+    "playerCat": {
+        "hp": 0,
+        "maxHp": 15,
+        "NavigateurStat": 0,
+        "CanonnierStat": 0,
+        "EscrimeurStat": 0,
+        "Name": "Skyron\u200b",
+        "Hats": [],
+        "hatIndex": 3,
+        "Eyepatches": [],
+        "EyepatchIndex": 1,
+        "FurCat": {
             "Face": {
-
+                "$id": "5"
             },
             "Ear": {
-
+                "$ref": "5"
             },
             "LeftHand": {
-
+                "$ref": "5"
             },
             "RightHand": {
-
+                "$ref": "5"
             },
             "Tail": {
-
+                "$ref": "5"
             }
         },
-        {
-            "hp": 0,
-            "maxHp": 0,
-            "NavigateurStat": 8,
-            "CanonnierStat": 1,
-            "EscrimeurStat": 6,
-            "Name": "Mario\u200b",
-            "Hats": [
-                {
-
-                },
-                {
-
-                },
-                {
-
-                },
-                {
-
-                },
-                {
-
-                }
-            ],
-            "hatIndex": 0,
-            "Eyepatches": [
-                {
-
-                },
-                {
-
-                },
-                {
-
-                }
-            ],
-            "EyepatchIndex": 0,
-            "FurCat": {
-                "Face": {
-                    "$ref": "16"
-                },
-                "Ear": {
-                    "$ref": "16"
-                },
-                "LeftHand": {
-                    "$ref": "16"
-                },
-                "RightHand": {
-                    "$ref": "16"
-                },
-                "Tail": {
-                    "$ref": "16"
-                }
-            },
-            "furIndex": 0,
-            "Clothes": {
-
-            },
-            "clotheIndex": 0,
-            "Body": {
-
-            },
-            "Face": {
-
-            },
-            "Ear": {
-
-            },
-            "LeftHand": {
-
-            },
-            "RightHand": {
-
-            },
-            "Tail": {
-
-            }
+        "furIndex": 1,
+        "Clothes": {
+            "$id": "6"
         },
+        "clotheIndex": 1,
+        "Body": null,
+        "Face": null,
+        "Ear": null,
+        "LeftHand": null,
+        "RightHand": null,
+        "Tail": null
+    },
+    "hiredCats": [],
+    "team": [
         {
-            "hp": 0,
-            "maxHp": 0,
-            "NavigateurStat": 5,
+            "hp": 15,
+            "maxHp": 15,
+            "NavigateurStat": 9,
             "CanonnierStat": 4,
-            "EscrimeurStat": 6,
+            "EscrimeurStat": 2,
             "Name": "Luigi\u200b",
             "Hats": [
                 {
@@ -197,19 +81,98 @@
             "EyepatchIndex": 0,
             "FurCat": {
                 "Face": {
-                    "$id": "55"
+                    "$id": "21"
                 },
                 "Ear": {
-                    "$ref": "55"
+                    "$ref": "21"
                 },
                 "LeftHand": {
-                    "$ref": "55"
+                    "$ref": "21"
                 },
                 "RightHand": {
-                    "$ref": "55"
+                    "$ref": "21"
                 },
                 "Tail": {
-                    "$ref": "55"
+                    "$ref": "21"
+                }
+            },
+            "furIndex": 0,
+            "Clothes": {
+                "$ref": "6"
+            },
+            "clotheIndex": 0,
+            "Body": {
+
+            },
+            "Face": {
+
+            },
+            "Ear": {
+
+            },
+            "LeftHand": {
+
+            },
+            "RightHand": {
+
+            },
+            "Tail": {
+
+            },
+            "$id": "9"
+        },
+        {
+            "hp": 15,
+            "maxHp": 15,
+            "NavigateurStat": 7,
+            "CanonnierStat": 5,
+            "EscrimeurStat": 3,
+            "Name": "Yoshi\u200b",
+            "Hats": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "hatIndex": 0,
+            "Eyepatches": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "EyepatchIndex": 0,
+            "FurCat": {
+                "Face": {
+                    "$id": "40"
+                },
+                "Ear": {
+                    "$ref": "40"
+                },
+                "LeftHand": {
+                    "$ref": "40"
+                },
+                "RightHand": {
+                    "$ref": "40"
+                },
+                "Tail": {
+                    "$ref": "40"
                 }
             },
             "furIndex": 0,
@@ -235,8 +198,10 @@
             "Tail": {
 
             }
+        },
+        {
+            "$ref": "9"
         }
     ],
-    "team": [],
-    "gold": 620
+    "gold": 616
 }

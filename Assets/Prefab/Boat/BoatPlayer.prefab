@@ -2634,7 +2634,7 @@ MonoBehaviour:
   _animator: {fileID: 2204618645515782100}
   speed: 5
   rotationSpeed: 60
-  catPrefab: {fileID: 8913578225335684845, guid: 6b05fea5398f27f4d9f72538de8ddf72,
+  catPrefab: {fileID: 7673043258338461082, guid: b5e5108f433fc9349a39bab7bc36ee15,
     type: 3}
   catsPositions:
   - {fileID: 4887968585495948543}

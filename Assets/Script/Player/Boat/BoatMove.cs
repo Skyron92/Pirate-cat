@@ -10,7 +10,7 @@ public class BoatMove : MonoBehaviour
     [Header("Move Settings \b")]
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private Animator _animator;
-    [Range(0, 500)] [SerializeField] private float speed;
+    private float speed;
     [Range(0, 100)] [SerializeField] private float rotationSpeed;
     private float angle;
     private float _inputMove;
@@ -21,12 +21,12 @@ public class BoatMove : MonoBehaviour
     [SerializeField] private List<Transform> catsPositions = new List<Transform>();
 
     private void Awake() {
-        speed = 5;
+        speed = 70;
         foreach (var cat in CatsManager.team) {
-            speed += 5*cat.NavigateurStat/10;
+            speed += 3*cat.NavigateurStat;
         }
 
-        for (int i = 0; i < CatsManager.team.Count + 1; i++) {
+        for (int i = 0; i < CatsManager.team.Count; i++) {
             Cat cat = Instantiate(catPrefab, catsPositions[i]).GetComponent<Cat>();
             if(i == 0) CatsManager.playerCat.Replace(cat);
             else {

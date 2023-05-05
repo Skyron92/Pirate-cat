@@ -35,7 +35,6 @@ public class CatEditor : MonoBehaviour
             if (_hatIndex - 1 < 0) cat.Hats[hats.Count - 1].SetActive(false);
             else cat.Hats[_hatIndex - 1].SetActive(false);
         }
-
         cat.hatIndex = _hatIndex;
     }
     
@@ -75,7 +74,7 @@ public class CatEditor : MonoBehaviour
 
     public void ValidateCat() {
         catsManager.playerCat = new Cat();
-        catsManager.playerCat.Replace(cat);
+        cat.Replace(catsManager.playerCat);
         catsManager.playerCat.SetName(textMeshProUGUI.text);
     }
 

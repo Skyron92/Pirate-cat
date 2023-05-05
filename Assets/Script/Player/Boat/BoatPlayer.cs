@@ -9,6 +9,9 @@ using UnityEngine.UI;
 public class BoatPlayer : MonoBehaviour 
 {
     public static bool IsEnded;
+    private CatsManager CatsManager => CatsManager.instance;
+    [SerializeField] private Transform right, left;
+    [SerializeField] private GameObject catPrefab;
     [SerializeField] private Camera _camera;
     [Range(1,10)] public int maxHp;
     [HideInInspector] public float currentHP;
@@ -21,6 +24,7 @@ public class BoatPlayer : MonoBehaviour
         _animator.SetBool("IsBattleShip", true);
         currentHP = maxHp;
         nextHP = currentHP;
+        SetCats();
     }
 
     private void Update() {
@@ -42,5 +46,16 @@ public class BoatPlayer : MonoBehaviour
     private void DisplayLife() {
         sliderLife.maxValue = maxHp;
         sliderLife.value = currentHP;
+    }
+
+    private void SetCats() {
+        if (CatsManager.team[0] != null) {
+            Cat cat = Instantiate(catPrefab, right.position, Quaternion.identity).GetComponent<Cat>();
+            CatsManager.team[0].Replace(cat);
+        }
+        if (CatsManager.team[1] != null) {
+            Cat cat = Instantiate(catPrefab, left.position, Quaternion.identity).GetComponent<Cat>();
+            CatsManager.team[1].Replace(cat);
+        }
     }
 }

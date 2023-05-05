@@ -41,7 +41,7 @@ public class Cat : MonoBehaviour {
     }
 
     void SwitchSkin() {
-        Body.material = Clothes;
+        if(Body.material != null) Body.material = Clothes;
         if(FurCat == null) return;
         Face.material = FurCat.Face;
         Ear.material = FurCat.Ear;
@@ -65,10 +65,12 @@ public class Cat : MonoBehaviour {
         catToReplace.hatIndex = hatIndex;
         catToReplace.EyepatchIndex = EyepatchIndex;
         catToReplace.Clothes = Clothes;
-        for (int i = 0; i < Hats.Count; i++) {
-            catToReplace.Hats[i].SetActive(Hats[i].activeSelf);
+        for (int i = 0; i < catToReplace.Hats.Count; i++) {
+            if (catToReplace.Hats == null) continue;
+                catToReplace.Hats[i].SetActive(Hats[i].activeSelf);
         }
-        for (int i = 0; i < Eyepatches.Count; i++) {
+        for (int i = 0; i < catToReplace.Eyepatches.Count; i++) {
+            if (catToReplace.Eyepatches == null) continue;
             catToReplace.Eyepatches[i].SetActive(Eyepatches[i].activeSelf);
         }
     }

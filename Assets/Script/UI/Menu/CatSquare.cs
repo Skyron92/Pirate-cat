@@ -46,10 +46,12 @@ public class CatSquare : MonoBehaviour
         if (!IsOnAValidPosition) {
             transform.SetParent(_inventory.viewportTransform);
             if (_inventory.currentTeam.Contains(this)) _inventory.currentTeam.Remove(this);
+            _inventory.stock.Add(this);
         }
         else {
             foreach (var trans in _inventory.teamPlacement) {
                 if (Vector3.Distance(trans.position, transform.position) < validRange) {
+                    if (_inventory.stock.Contains(this)) _inventory.stock.Remove(this);
                     transform.position = trans.position;
                     _inventory.currentTeam.Add(this);
                 }

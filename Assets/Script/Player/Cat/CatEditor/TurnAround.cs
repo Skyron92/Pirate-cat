@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TurnAround : MonoBehaviour
 {
@@ -26,8 +27,8 @@ public class TurnAround : MonoBehaviour
         transform.rotation = rotation;
     }
 
-    void RotateByMouse()
-    {
+    void RotateByMouse() {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
         float xAxisRotation = Input.GetAxis("Mouse X") * sensitivity;
         float yAxisRotation = Input.GetAxis("Mouse Y") * sensitivity;
         

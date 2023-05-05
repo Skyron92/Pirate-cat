@@ -10,37 +10,40 @@ public class GachaManager : MonoBehaviour
     [SerializeField] private DataManager dataManager;
     [SerializeField] private GameObject catPrefab;
     private Cat cat;
-    private System.Random _roll = new System.Random();
     [SerializeField] private List<Fur> furList = new List<Fur>();
     [SerializeField] private List<GameObject> hatList = new List<GameObject>();
     [SerializeField] private List<GameObject> eyePatchList = new List<GameObject>();
     [SerializeField] private List<Material> clothList = new List<Material>();
 
     [SerializeField] [Range(0, 500)] private int cost;
-    [SerializeField] private TextMeshProUGUI costText;
 
     public void UpdateCostDisplay(TextMeshProUGUI textMeshProUGUI) {
         textMeshProUGUI.text = cost.ToString();
+    }
+
+    public void UpdateGold(TextMeshProUGUI textMeshProUGUI) {
+        textMeshProUGUI.text = catsManager.gold.ToString();
     }
 
     public void HireCat() {
         if (catsManager.gold >= cost) {
             GameObject newCat = Instantiate(catPrefab);
             cat = newCat.GetComponent<Cat>();
-            cat.Clothes = clothList[_roll.Next(0, clothList.Count)];
+            cat.Clothes = clothList[new System.Random().Next(0, clothList.Count)];
             int chance = Random.Range(0, 100);
             if (chance >= 95) {
                 cat.Eyepatches[1].SetActive(true);
                 cat.Eyepatches[2].SetActive(true);
             }
             if(chance <= 15) {
-                int value = _roll.Next(1, eyePatchList.Count);
-                cat.Eyepatches[value].SetActive(true); 
+                int value = new System.Random().Next(1, eyePatchList.Count);
+                cat.Eyepatches[value].SetActive(true);
             }
-            int hatvalue = _roll.Next(0, hatList.Count);
+            int hatvalue = new System.Random().Next(0, hatList.Count);
             cat.Hats[hatvalue].SetActive(true);
-            cat.FurCat = furList[_roll.Next(0, furList.Count)];
+            cat.FurCat = furList[new System.Random().Next(0, furList.Count)];
             CreateStatistic();
+            catsManager.gold -= cost;
         }
     }
 

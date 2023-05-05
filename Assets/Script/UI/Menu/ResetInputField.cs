@@ -10,6 +10,6 @@ public class ResetInputField : MonoBehaviour
 
     private void Awake() {
         _textMeshProUGUI = GetComponent<TextMeshProUGUI>();
-        _textMeshProUGUI.text = "";
+        _textMeshProUGUI.text.Remove(0);
     }
 }

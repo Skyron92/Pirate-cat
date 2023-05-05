@@ -8,6 +8,8 @@ using UnityEngine;
 [Serializable]
 public class CatsManager : MonoBehaviour
 {
+
+    
     public static CatsManager instance = new CatsManager();
     public string Name;
     public Cat playerCat;
@@ -20,7 +22,6 @@ public class CatsManager : MonoBehaviour
     }
 
     public CatsManager() {
-        
     }
 
     private void Awake() {
@@ -28,7 +29,7 @@ public class CatsManager : MonoBehaviour
     }
 
     private void Update() {
-        Debug.Log(Name);
+        Debug.Log(team.Count);
     }
 
     public void SetGame(CatsManager newCatsManager) {

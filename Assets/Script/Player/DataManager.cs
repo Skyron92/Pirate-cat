@@ -37,6 +37,7 @@ public class DataManager : MonoBehaviour
     
     public void DisplayAllFoundFilesForLoad() {
         loadGamePanel.SetActive(true);
+        int saveCount = 0;
         for (int i = 0; i < CatFiles.Count; i++) {
                 string variableFile = CatFiles[i];
                 TextMeshProUGUI tmp = saveButtons[i].GetComponentInChildren<TextMeshProUGUI>();
@@ -47,6 +48,12 @@ public class DataManager : MonoBehaviour
                     loadGamePanel.SetActive(false);
                     Load();
                 });
+                saveCount++;
+        }
+
+        if (saveCount >= 3) return;
+        for (int i = saveCount; i < saveButtons.Count; i++) { 
+            saveButtons[i].interactable = false;
         }
 
         
@@ -161,6 +168,9 @@ public class DataManager : MonoBehaviour
             return;
         }
         catsManager.Name = GameNameField.text;
+    }
+
+    public void CreateSave() {
         SaveCatsManager(catsManager);
     }
 }

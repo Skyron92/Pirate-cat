@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour
 
     [Header("Player Settings")]
     //[SerializeField] private BoatMove boatMove;
+    [SerializeField] private BoatMove boatMove;
     [SerializeField] private BoatPlayer boatPlayer;
     [SerializeField] private TeamManager teamManager;
     
@@ -25,7 +26,6 @@ public class LevelManager : MonoBehaviour
 
     private void Awake() {
         _currentIndex = 0;
-       // boatMove.enabled = true;
     }
 
     private void OnDestroy() {
@@ -34,7 +34,9 @@ public class LevelManager : MonoBehaviour
     }
 
     private void Update() {
+        if(!boatMove.enabled) boatMove.enabled = true;
         VerifyCurrentStep();
+        Debug.Log(_currentIndex);
     }
 
     private void VerifyCurrentStep() {
