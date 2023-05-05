@@ -1,4 +1,7 @@
 {
+    "catPrefab": {
+
+    },
     "Name": "Mario cat\u200b",
     "playerCat": {
         "hp": 0,
@@ -11,28 +14,10 @@
         "hatIndex": 3,
         "Eyepatches": [],
         "EyepatchIndex": 1,
-        "FurCat": {
-            "Face": {
-                "$id": "5"
-            },
-            "Ear": {
-                "$ref": "5"
-            },
-            "LeftHand": {
-                "$ref": "5"
-            },
-            "RightHand": {
-                "$ref": "5"
-            },
-            "Tail": {
-                "$ref": "5"
-            }
-        },
-        "furIndex": 1,
-        "Clothes": {
-            "$id": "6"
-        },
-        "clotheIndex": 1,
+        "FurCat": null,
+        "furIndex": 0,
+        "Clothes": null,
+        "clotheIndex": 2,
         "Body": null,
         "Face": null,
         "Ear": null,
@@ -45,87 +30,8 @@
         {
             "hp": 15,
             "maxHp": 15,
-            "NavigateurStat": 9,
-            "CanonnierStat": 4,
-            "EscrimeurStat": 2,
-            "Name": "Luigi\u200b",
-            "Hats": [
-                {
-
-                },
-                {
-
-                },
-                {
-
-                },
-                {
-
-                },
-                {
-
-                }
-            ],
-            "hatIndex": 0,
-            "Eyepatches": [
-                {
-
-                },
-                {
-
-                },
-                {
-
-                }
-            ],
-            "EyepatchIndex": 0,
-            "FurCat": {
-                "Face": {
-                    "$id": "21"
-                },
-                "Ear": {
-                    "$ref": "21"
-                },
-                "LeftHand": {
-                    "$ref": "21"
-                },
-                "RightHand": {
-                    "$ref": "21"
-                },
-                "Tail": {
-                    "$ref": "21"
-                }
-            },
-            "furIndex": 0,
-            "Clothes": {
-                "$ref": "6"
-            },
-            "clotheIndex": 0,
-            "Body": {
-
-            },
-            "Face": {
-
-            },
-            "Ear": {
-
-            },
-            "LeftHand": {
-
-            },
-            "RightHand": {
-
-            },
-            "Tail": {
-
-            },
-            "$id": "9"
-        },
-        {
-            "hp": 15,
-            "maxHp": 15,
-            "NavigateurStat": 7,
-            "CanonnierStat": 5,
+            "NavigateurStat": 4,
+            "CanonnierStat": 8,
             "EscrimeurStat": 3,
             "Name": "Yoshi\u200b",
             "Hats": [
@@ -145,7 +51,7 @@
 
                 }
             ],
-            "hatIndex": 0,
+            "hatIndex": 4,
             "Eyepatches": [
                 {
 
@@ -157,27 +63,28 @@
 
                 }
             ],
-            "EyepatchIndex": 0,
+            "EyepatchIndex": 2,
             "FurCat": {
                 "Face": {
-                    "$id": "40"
+                    "$id": "19"
                 },
                 "Ear": {
-                    "$ref": "40"
+                    "$ref": "19"
                 },
                 "LeftHand": {
-                    "$ref": "40"
+                    "$ref": "19"
                 },
                 "RightHand": {
-                    "$ref": "40"
+                    "$ref": "19"
                 },
                 "Tail": {
-                    "$ref": "40"
-                }
+                    "$ref": "19"
+                },
+                "$id": "18"
             },
             "furIndex": 0,
             "Clothes": {
-
+                "$id": "20"
             },
             "clotheIndex": 0,
             "Body": {
@@ -200,7 +107,72 @@
             }
         },
         {
-            "$ref": "9"
+            "hp": 15,
+            "maxHp": 15,
+            "NavigateurStat": 7,
+            "CanonnierStat": 3,
+            "EscrimeurStat": 5,
+            "Name": "Peach\u200b",
+            "Hats": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "hatIndex": 3,
+            "Eyepatches": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "EyepatchIndex": 0,
+            "FurCat": {
+                "$ref": "18"
+            },
+            "furIndex": 0,
+            "Clothes": {
+                "$ref": "20"
+            },
+            "clotheIndex": 0,
+            "Body": {
+
+            },
+            "Face": {
+
+            },
+            "Ear": {
+
+            },
+            "LeftHand": {
+
+            },
+            "RightHand": {
+
+            },
+            "Tail": {
+
+            },
+            "$id": "27"
+        },
+        {
+            "$ref": "27"
         }
     ],
     "gold": 616

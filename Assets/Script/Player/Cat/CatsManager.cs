@@ -4,12 +4,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using Cache = UnityEngine.Cache;
 
 [Serializable]
 public class CatsManager : MonoBehaviour
 {
+    /// <summary>
+    /// Pour test, à retirer ensuite!!!
+    /// </summary>
+    ///
+    public GameObject catPrefab;
 
-    
+   
+
     public static CatsManager instance = new CatsManager();
     public string Name;
     public Cat playerCat;
@@ -23,13 +30,16 @@ public class CatsManager : MonoBehaviour
 
     public CatsManager() {
     }
+    
+    private void Update() {
+        if (Input.GetKey(KeyCode.L)) {
+            Cat cat = Instantiate(catPrefab).GetComponent<Cat>();
+            playerCat.Replace(cat);
+        }
+    }
 
     private void Awake() {
         instance = this;
-    }
-
-    private void Update() {
-        Debug.Log(team.Count);
     }
 
     public void SetGame(CatsManager newCatsManager) {

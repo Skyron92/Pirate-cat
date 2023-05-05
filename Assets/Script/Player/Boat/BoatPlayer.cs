@@ -49,13 +49,9 @@ public class BoatPlayer : MonoBehaviour
     }
 
     private void SetCats() {
-        if (CatsManager.team[0] != null) {
-            Cat cat = Instantiate(catPrefab, right.position, Quaternion.identity).GetComponent<Cat>();
-            CatsManager.team[0].Replace(cat);
-        }
-        if (CatsManager.team[1] != null) {
-            Cat cat = Instantiate(catPrefab, left.position, Quaternion.identity).GetComponent<Cat>();
-            CatsManager.team[1].Replace(cat);
-        }
+        Cat catRight = Instantiate(catPrefab, right).GetComponent<Cat>();
+        CatsManager.team[0].Replace(catRight);
+        Cat catLeft = Instantiate(catPrefab, left).GetComponent<Cat>();
+        CatsManager.team[1].Replace(catLeft);
     }
 }

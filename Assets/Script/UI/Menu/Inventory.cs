@@ -40,6 +40,5 @@ public class Inventory : MonoBehaviour {
             catsManager.hiredCats.Add(catSquare.cat);
         }
         dataManager.SaveCatsManager(catsManager);
-        Debug.Log("Team Saved !");
     }
 }

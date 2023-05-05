@@ -20,6 +20,9 @@ public class AITeamManager : MonoBehaviour {
     private bool _catIsDead;
     
     void Awake() {
+        foreach (var cat in crew) {
+            cat.maxHp = 15;
+        }
         PutCat();
     }
     

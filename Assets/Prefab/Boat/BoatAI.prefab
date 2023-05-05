@@ -4267,9 +4267,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3157e1848069c1241a6f7ba4c7c75d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showFields: 0
+  showFields: 1
   fieldOfView: 15
   fieldOfDefeat: 8
+  fieldOfEscape: 70
   speedRun: 2
   speedCalm: 1
   _rigidbody: {fileID: 2625505603615075321}

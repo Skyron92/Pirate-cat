@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -28,8 +29,11 @@ public class MenuManager : MonoBehaviour
     void Start() {
         webglMenu.SetActive(!isApplication);
         appMenu.SetActive(isApplication);
-        SetProjectVersion();
         gold.text = catsManager.gold.ToString();
+    }
+
+    private void Awake() {
+        SetProjectVersion();
     }
 
     public void Quit() {

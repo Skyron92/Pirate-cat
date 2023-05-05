@@ -26,7 +26,7 @@ public class BoatMove : MonoBehaviour
             speed += 3*cat.NavigateurStat;
         }
 
-        for (int i = 0; i < CatsManager.team.Count; i++) {
+        for (int i = 0; i < catsPositions.Count; i++) {
             Cat cat = Instantiate(catPrefab, catsPositions[i]).GetComponent<Cat>();
             if(i == 0) CatsManager.playerCat.Replace(cat);
             else {

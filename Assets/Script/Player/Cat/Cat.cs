@@ -25,6 +25,8 @@ public class Cat : MonoBehaviour {
     [SerializeField] private MeshRenderer LeftHand;
     [SerializeField] private MeshRenderer RightHand;
     [SerializeField] private SkinnedMeshRenderer Tail;
+    
+    private SkinManager SkinManager => SkinManager.Instance;
 
     public int CatID => furIndex & clotheIndex & hatIndex & EyepatchIndex & NavigateurStat & CanonnierStat &
                         EscrimeurStat;
@@ -37,6 +39,7 @@ public class Cat : MonoBehaviour {
     }
 
     private void Update() {
+        SkinManager.DressUp(this);
         SwitchSkin();
     }
 
@@ -59,19 +62,9 @@ public class Cat : MonoBehaviour {
         catToReplace.CanonnierStat = CanonnierStat;
         catToReplace.EscrimeurStat = EscrimeurStat;
         catToReplace.Name = Name;
-        catToReplace.FurCat = FurCat;
         catToReplace.furIndex = furIndex;
         catToReplace.clotheIndex = clotheIndex;
         catToReplace.hatIndex = hatIndex;
         catToReplace.EyepatchIndex = EyepatchIndex;
-        catToReplace.Clothes = Clothes;
-        for (int i = 0; i < catToReplace.Hats.Count; i++) {
-            if (catToReplace.Hats == null) continue;
-                catToReplace.Hats[i].SetActive(Hats[i].activeSelf);
-        }
-        for (int i = 0; i < catToReplace.Eyepatches.Count; i++) {
-            if (catToReplace.Eyepatches == null) continue;
-            catToReplace.Eyepatches[i].SetActive(Eyepatches[i].activeSelf);
-        }
     }
 }

@@ -29,14 +29,14 @@ public class LevelManager : MonoBehaviour
     }
 
     private void OnDestroy() {
-        GameObject MenuItem = GameObject.Find("----------MENU---------------------");
+        GameObject MenuItem = GameObject.Find("MENU");
         MenuItem.SetActive(true);
     }
 
     private void Update() {
         if(!boatMove.enabled) boatMove.enabled = true;
         VerifyCurrentStep();
-        Debug.Log(_currentIndex);
+        Debug.Log(CurrentStepIsLoose());
     }
 
     private void VerifyCurrentStep() {
@@ -48,17 +48,13 @@ public class LevelManager : MonoBehaviour
     }
 
     private bool CurrentStepIsEnded (){
-        switch (_currentIndex)
-        {
+        switch (_currentIndex) {
             case 0 :
                 return aiBoat.DistanceWithPlayer < aiBoat.fieldOfDefeat;
-            break;
             case 1 :
-                return aiCanonBoat.currentHP <= 0;
-                break;
+                return aiCanonBoat.currentHP <= 0.1;
             case 2 :
                 return !aiTeamManager.crew.Exists(x => x.hp > 0);
-                break;
             default: return false;
         }
     }
