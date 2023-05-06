@@ -21,7 +21,6 @@ public class TeamManager : MonoBehaviour
     private float timer;
     private bool isSwitchingTurn;
     private bool _catIsDead;
-    public int currentIndex;
 
     private void Awake() {
         PutCat();

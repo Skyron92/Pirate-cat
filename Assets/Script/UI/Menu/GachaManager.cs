@@ -17,6 +17,8 @@ public class GachaManager : MonoBehaviour
 
     [SerializeField] [Range(0, 500)] private int cost;
 
+    [SerializeField] private GameObject errorPanel;
+
     public void UpdateCostDisplay(TextMeshProUGUI textMeshProUGUI) {
         textMeshProUGUI.text = cost.ToString();
     }
@@ -42,6 +44,11 @@ public class GachaManager : MonoBehaviour
 
 
     public void ValidateName(TextMeshProUGUI textMeshProUGUI) {
+        if (catsManager.hiredCats.Exists(x => x.Name == textMeshProUGUI.text) ||
+            catsManager.team.Exists(x => x.Name == textMeshProUGUI.text)) {
+            errorPanel.SetActive(true);
+            return;
+        }
         cat.Name = textMeshProUGUI.text;
         Debug.Log(cat.Name);
         catsManager.hiredCats.Add(cat);

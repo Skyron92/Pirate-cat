@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [Serializable]
 public class Cat : MonoBehaviour {
@@ -20,11 +21,13 @@ public class Cat : MonoBehaviour {
     public Material Clothes;
     [HideInInspector] public int clotheIndex;
     [SerializeField] private MeshRenderer Body;
-    [SerializeField] private MeshRenderer Face;
+    public MeshRenderer Face;
     [SerializeField] private MeshRenderer Ear;
     [SerializeField] private MeshRenderer LeftHand;
     [SerializeField] private MeshRenderer RightHand;
     [SerializeField] private SkinnedMeshRenderer Tail;
+    [HideInInspector] public bool isHurt;
+    private Animator animator;
     
     private SkinManager SkinManager => SkinManager.Instance;
 
@@ -36,14 +39,19 @@ public class Cat : MonoBehaviour {
         for(int i = 0; i < Hats.Count; i++) Hats[i].SetActive(i == hatIndex);
         for(int i = 0; i < Eyepatches.Count; i++) Eyepatches[i].SetActive(i == EyepatchIndex);
         Replace(this);
+        SwitchSkin();
+        animator = GetComponent<Animator>();
+        
     }
 
     private void Update() {
-        SkinManager.DressUp(this);
+        if(!isHurt) SkinManager.DressUp(this);
+        if(isHurt) SkinManager.SetColorRed(this);
         SwitchSkin();
+        if (!animator.enabled) animator.enabled = true;
     }
 
-    void SwitchSkin() {
+    private void SwitchSkin() {
         if(Body.material != null) Body.material = Clothes;
         if(FurCat == null) return;
         Face.material = FurCat.Face;

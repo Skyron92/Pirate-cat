@@ -226,6 +226,10 @@ MonoBehaviour:
     m_Localized: Retreat
     m_Metadata:
       m_Items: []
+  - m_Id: 19988328758513664
+    m_Localized: This name is already taken by another cat!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

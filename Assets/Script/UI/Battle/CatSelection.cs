@@ -17,12 +17,11 @@ public class CatSelection : MonoBehaviour {
     }
 
     private void Update() {
-        currentCatButton.interactable = player.Crew[index] != player.currentCat;
+        currentCatButton.interactable = player.Crew[index].Name != text.text;
         life.value = player.Crew[index].hp;
     }
 
     public void SwitchCat() {
-        player.currentIndex = index;
         player.PutNewCat(index);
     }
 }

@@ -15,25 +15,105 @@
         "Eyepatches": [],
         "EyepatchIndex": 1,
         "FurCat": null,
-        "furIndex": 0,
+        "furIndex": 1,
         "Clothes": null,
-        "clotheIndex": 2,
+        "clotheIndex": 0,
         "Body": null,
         "Face": null,
         "Ear": null,
         "LeftHand": null,
         "RightHand": null,
-        "Tail": null
+        "Tail": null,
+        "isHurt": false
     },
     "hiredCats": [],
     "team": [
         {
             "hp": 15,
             "maxHp": 15,
-            "NavigateurStat": 4,
+            "NavigateurStat": 6,
             "CanonnierStat": 8,
-            "EscrimeurStat": 3,
-            "Name": "Yoshi\u200b",
+            "EscrimeurStat": 1,
+            "Name": "Luigi\u200b",
+            "Hats": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "hatIndex": 0,
+            "Eyepatches": [
+                {
+
+                },
+                {
+
+                },
+                {
+
+                }
+            ],
+            "EyepatchIndex": 1,
+            "FurCat": {
+                "Face": {
+                    "$id": "19"
+                },
+                "Ear": {
+                    "$ref": "19"
+                },
+                "LeftHand": {
+                    "$ref": "19"
+                },
+                "RightHand": {
+                    "$ref": "19"
+                },
+                "Tail": {
+                    "$ref": "19"
+                }
+            },
+            "furIndex": 2,
+            "Clothes": {
+                "$id": "20"
+            },
+            "clotheIndex": 2,
+            "Body": {
+
+            },
+            "Face": {
+
+            },
+            "Ear": {
+
+            },
+            "LeftHand": {
+
+            },
+            "RightHand": {
+
+            },
+            "Tail": {
+
+            },
+            "isHurt": false
+        },
+        {
+            "hp": 15,
+            "maxHp": 15,
+            "NavigateurStat": 6,
+            "CanonnierStat": 5,
+            "EscrimeurStat": 4,
+            "Name": "Mario\u200b",
             "Hats": [
                 {
 
@@ -63,28 +143,27 @@
 
                 }
             ],
-            "EyepatchIndex": 2,
+            "EyepatchIndex": 0,
             "FurCat": {
                 "Face": {
-                    "$id": "19"
+                    "$id": "39"
                 },
                 "Ear": {
-                    "$ref": "19"
+                    "$ref": "39"
                 },
                 "LeftHand": {
-                    "$ref": "19"
+                    "$ref": "39"
                 },
                 "RightHand": {
-                    "$ref": "19"
+                    "$ref": "39"
                 },
                 "Tail": {
-                    "$ref": "19"
-                },
-                "$id": "18"
+                    "$ref": "39"
+                }
             },
-            "furIndex": 0,
+            "furIndex": 1,
             "Clothes": {
-                "$id": "20"
+
             },
             "clotheIndex": 0,
             "Body": {
@@ -104,14 +183,15 @@
             },
             "Tail": {
 
-            }
+            },
+            "isHurt": false
         },
         {
             "hp": 15,
             "maxHp": 15,
-            "NavigateurStat": 7,
-            "CanonnierStat": 3,
-            "EscrimeurStat": 5,
+            "NavigateurStat": 5,
+            "CanonnierStat": 4,
+            "EscrimeurStat": 6,
             "Name": "Peach\u200b",
             "Hats": [
                 {
@@ -130,7 +210,7 @@
 
                 }
             ],
-            "hatIndex": 3,
+            "hatIndex": 2,
             "Eyepatches": [
                 {
 
@@ -144,13 +224,27 @@
             ],
             "EyepatchIndex": 0,
             "FurCat": {
-                "$ref": "18"
+                "Face": {
+                    "$ref": "39"
+                },
+                "Ear": {
+                    "$ref": "19"
+                },
+                "LeftHand": {
+                    "$id": "59"
+                },
+                "RightHand": {
+                    "$ref": "59"
+                },
+                "Tail": {
+                    "$ref": "39"
+                }
             },
-            "furIndex": 0,
+            "furIndex": 3,
             "Clothes": {
                 "$ref": "20"
             },
-            "clotheIndex": 0,
+            "clotheIndex": 2,
             "Body": {
 
             },
@@ -169,11 +263,8 @@
             "Tail": {
 
             },
-            "$id": "27"
-        },
-        {
-            "$ref": "27"
+            "isHurt": false
         }
     ],
-    "gold": 616
+    "gold": 617
 }

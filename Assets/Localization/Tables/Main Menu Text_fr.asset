@@ -222,6 +222,10 @@ MonoBehaviour:
     m_Localized: Battre en retraite
     m_Metadata:
       m_Items: []
+  - m_Id: 19988328758513664
+    m_Localized: "Ce nom est d\xE9j\xE0 pris par un autre chat !"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -23,8 +23,9 @@ public class Inventory : MonoBehaviour {
             }
         }
 
-        foreach (var cat in catsManager.hiredCats.Where(cat => !catsManager.team.Contains(cat))) {
-            CatSquare catSquare = Instantiate(catSquarePrefab, viewportTransform).GetComponent<CatSquare>();
+        foreach (var cat in catsManager.hiredCats) {
+            GameObject instance = Instantiate(catSquarePrefab, viewportTransform);
+            CatSquare catSquare = instance.GetComponent<CatSquare>();
             catSquare.cat = cat;
             stock.Add(catSquare);
         }

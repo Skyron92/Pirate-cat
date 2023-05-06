@@ -222,6 +222,10 @@ MonoBehaviour:
     m_Localized: Retiro
     m_Metadata:
       m_Items: []
+  - m_Id: 19988328758513664
+    m_Localized: "\xA1Este nombre ya est\xE1 ocupado por otro gato!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
