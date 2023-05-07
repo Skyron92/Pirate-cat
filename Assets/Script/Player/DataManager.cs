@@ -19,6 +19,7 @@ public class DataManager : MonoBehaviour
     [SerializeField] private GameObject confirmationPanel;
     [SerializeField] private GameObject newGamePanel;
     [SerializeField] private GameObject loadGamePanel;
+    [SerializeField] private GameObject loadingPanel;
     [SerializeField] private GameObject newGameCreationPanel;
     [SerializeField] private GameObject errorPanel;
     private static readonly string CatPath = Application.streamingAssetsPath;
@@ -43,6 +44,7 @@ public class DataManager : MonoBehaviour
                 TextMeshProUGUI tmp = saveButtons[i].GetComponentInChildren<TextMeshProUGUI>();
                 tmp.text = variableFile.Remove(variableFile.Length - 5, 5).Replace('_', ' ');
                 saveButtons[i].onClick.AddListener(delegate {
+                    Instantiate(loadingPanel, saveButtons[i].transform.parent.parent);
                     PlayerPrefs.SetString(Properties.Pref.LoadedGame, variableFile);
                     Debug.Log(variableFile + " has been loaded.");
                     loadGamePanel.SetActive(false);

@@ -17,3 +17,4 @@ MonoBehaviour:
   LeftHand: {fileID: 2100000, guid: a2158dc1670c4b94bb5ea11397ca7640, type: 2}
   RightHand: {fileID: 2100000, guid: a2158dc1670c4b94bb5ea11397ca7640, type: 2}
   Tail: {fileID: 2100000, guid: a2158dc1670c4b94bb5ea11397ca7640, type: 2}
+  Sourcil: {fileID: 2100000, guid: cb2140f9b3d69c74e8e53628c6e5062a, type: 2}

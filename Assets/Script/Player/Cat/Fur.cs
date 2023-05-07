@@ -7,4 +7,5 @@ public class Fur : ScriptableObject {
     public Material LeftHand;
     public Material RightHand;
     public Material Tail;
+    public Material Sourcil;
 }

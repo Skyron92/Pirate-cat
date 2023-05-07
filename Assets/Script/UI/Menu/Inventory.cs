@@ -23,11 +23,13 @@ public class Inventory : MonoBehaviour {
             }
         }
 
-        foreach (var cat in catsManager.hiredCats) {
-            GameObject instance = Instantiate(catSquarePrefab, viewportTransform);
-            CatSquare catSquare = instance.GetComponent<CatSquare>();
-            catSquare.cat = cat;
-            stock.Add(catSquare);
+        if (catsManager.hiredCats.Count > 0) {
+            foreach (var cat in catsManager.hiredCats) {
+                GameObject instance = Instantiate(catSquarePrefab, viewportTransform);
+                CatSquare catSquare = instance.GetComponent<CatSquare>();
+                catSquare.cat = cat;
+                stock.Add(catSquare);
+            }
         }
     }
 

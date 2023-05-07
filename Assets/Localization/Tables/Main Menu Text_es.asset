@@ -226,6 +226,10 @@ MonoBehaviour:
     m_Localized: "\xA1Este nombre ya est\xE1 ocupado por otro gato!"
     m_Metadata:
       m_Items: []
+  - m_Id: 20379825924345856
+    m_Localized: Cargando...
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

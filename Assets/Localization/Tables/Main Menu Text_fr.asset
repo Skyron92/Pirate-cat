@@ -226,6 +226,10 @@ MonoBehaviour:
     m_Localized: "Ce nom est d\xE9j\xE0 pris par un autre chat !"
     m_Metadata:
       m_Items: []
+  - m_Id: 20379825924345856
+    m_Localized: Chargement...
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

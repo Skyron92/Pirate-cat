@@ -230,6 +230,10 @@ MonoBehaviour:
     m_Localized: This name is already taken by another cat!
     m_Metadata:
       m_Items: []
+  - m_Id: 20379825924345856
+    m_Localized: Loading...
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

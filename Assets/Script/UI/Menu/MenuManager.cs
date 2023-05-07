@@ -36,6 +36,7 @@ public class MenuManager : MonoBehaviour
         SetProjectVersion();
     }
 
+
     public void Quit() {
         if (Application.isEditor) EditorApplication.isPlaying = false;
         else Application.Quit();

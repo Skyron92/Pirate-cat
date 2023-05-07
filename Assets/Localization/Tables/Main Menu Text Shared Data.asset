@@ -231,6 +231,10 @@ MonoBehaviour:
     m_Key: Name taken
     m_Metadata:
       m_Items: []
+  - m_Id: 20379825924345856
+    m_Key: Loading
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
