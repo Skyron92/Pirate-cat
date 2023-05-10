@@ -23,8 +23,6 @@ public class Cat : MonoBehaviour {
     [SerializeField] private MeshRenderer Body;
     public MeshRenderer Face;
     [SerializeField] private MeshRenderer Ear;
-    [SerializeField] private MeshRenderer sourcilDroit;
-    [SerializeField] private MeshRenderer sourcilGauche;
     [SerializeField] private MeshRenderer LeftHand;
     [SerializeField] private MeshRenderer RightHand;
     [SerializeField] private SkinnedMeshRenderer Tail;
@@ -47,9 +45,12 @@ public class Cat : MonoBehaviour {
     }
 
     private void Update() {
-        if(!isHurt) SkinManager.DressUp(this);
+        if (!isHurt) {
+            SkinManager.DressUp(this);
+            SwitchSkin();
+        }
         if(isHurt) SkinManager.SetColorRed(this);
-        SwitchSkin();
+       
         if (!animator.enabled) animator.enabled = true;
     }
 
@@ -61,8 +62,6 @@ public class Cat : MonoBehaviour {
         LeftHand.material = FurCat.LeftHand;
         RightHand.material = FurCat.RightHand;
         Tail.material = FurCat.Tail;
-        sourcilDroit.material = FurCat.Sourcil;
-        sourcilGauche.material = FurCat.Sourcil;
     }
 
     public void SetName(string name) {

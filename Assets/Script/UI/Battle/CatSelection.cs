@@ -7,18 +7,19 @@ using Slider = UnityEngine.UI.Slider;
 public class CatSelection : MonoBehaviour {
     [Range(0,2)] [SerializeField] private int index;
     [SerializeField] private TeamManager player;
-    [SerializeField] private Button currentCatButton;
+    private Button currentCatButton;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Slider life;
 
     private void Awake() {
+        currentCatButton = GetComponent<Button>();
         life.maxValue = player.Crew[index].maxHp;
+        life.value = player.Crew[index].hp;
         text.text = player.Crew[index].Name;
     }
 
     private void Update() {
-        currentCatButton.interactable = player.Crew[index].Name != text.text;
-        life.value = player.Crew[index].hp;
+        if (life.value == 0) currentCatButton.interactable = false;
     }
 
     public void SwitchCat() {

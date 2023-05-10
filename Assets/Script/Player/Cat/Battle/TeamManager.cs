@@ -21,12 +21,20 @@ public class TeamManager : MonoBehaviour
     private float timer;
     private bool isSwitchingTurn;
     private bool _catIsDead;
+    private bool _isTheFirstBattle = true;
 
     private void Awake() {
         PutCat();
+        if (_isTheFirstBattle) {
+            foreach (var cat in Crew) {
+                cat.hp = cat.maxHp;
+            }
+            _isTheFirstBattle = false;
+        }
     }
 
     private void Update() {
+        Debug.Log(currentCat.Name + " " + currentCat.hp + " Hp");
         Die();
         DisableButton();
         TimeAnimation();

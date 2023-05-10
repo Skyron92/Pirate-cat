@@ -21,7 +21,7 @@ public class AITeamManager : MonoBehaviour {
     
     void Awake() {
         foreach (var cat in crew) {
-            cat.maxHp = 15;
+            cat.hp = cat.maxHp;
         }
         PutCat();
     }

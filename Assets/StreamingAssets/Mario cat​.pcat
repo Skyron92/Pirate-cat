@@ -21,8 +21,6 @@
         "Body": null,
         "Face": null,
         "Ear": null,
-        "sourcilDroit": null,
-        "sourcilGauche": null,
         "LeftHand": null,
         "RightHand": null,
         "Tail": null,
@@ -99,8 +97,6 @@
             "Ear": {
 
             },
-            "sourcilDroit": null,
-            "sourcilGauche": null,
             "LeftHand": {
 
             },
@@ -181,8 +177,6 @@
             "Ear": {
 
             },
-            "sourcilDroit": null,
-            "sourcilGauche": null,
             "LeftHand": {
 
             },
@@ -263,8 +257,6 @@
             "Ear": {
 
             },
-            "sourcilDroit": null,
-            "sourcilGauche": null,
             "LeftHand": {
 
             },
