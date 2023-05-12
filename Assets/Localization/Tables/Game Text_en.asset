@@ -46,6 +46,10 @@ MonoBehaviour:
     m_Localized: There is no cat left on board ! Let's run away !
     m_Metadata:
       m_Items: []
+  - m_Id: 21850866248978432
+    m_Localized: Victory ! The gold is ours !
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -46,6 +46,10 @@ MonoBehaviour:
     m_Localized: "Il ne reste plus de chat \xE0 bord ! Fuyons !"
     m_Metadata:
       m_Items: []
+  - m_Id: 21850866248978432
+    m_Localized: "Victoire ! L'or est \xE0 nous !"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

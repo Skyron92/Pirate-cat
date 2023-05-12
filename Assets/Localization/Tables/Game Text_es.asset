@@ -46,6 +46,10 @@ MonoBehaviour:
     m_Localized: "\xA1No quedan ning\xFAn gato a bordo! \xA1Huyamos!"
     m_Metadata:
       m_Items: []
+  - m_Id: 21850866248978432
+    m_Localized: "\xA1Victoria! \xA1El oro es nuestro!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -43,6 +43,10 @@ MonoBehaviour:
     m_Key: Battle Game over
     m_Metadata:
       m_Items: []
+  - m_Id: 21850866248978432
+    m_Key: Victory
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
