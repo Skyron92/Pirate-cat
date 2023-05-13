@@ -9,6 +9,7 @@ public class GachaManager : MonoBehaviour
     [SerializeField] private CatsManager catsManager;
     [SerializeField] private DataManager dataManager;
     [SerializeField] private GameObject catPrefab;
+    [SerializeField] private Transform spawnCat;
     private Cat cat;
     [SerializeField] private List<Fur> furList = new List<Fur>();
     [SerializeField] private List<GameObject> hatList = new List<GameObject>();
@@ -18,6 +19,8 @@ public class GachaManager : MonoBehaviour
     [SerializeField] [Range(0, 500)] private int cost;
 
     [SerializeField] private GameObject errorPanel;
+
+    private GameObject _catInstance;
 
     public void UpdateCostDisplay(TextMeshProUGUI textMeshProUGUI) {
         textMeshProUGUI.text = cost.ToString();
@@ -29,8 +32,8 @@ public class GachaManager : MonoBehaviour
 
     public void HireCat() {
         if (catsManager.gold >= cost) {
-            GameObject newCat = Instantiate(catPrefab);
-            cat = newCat.GetComponent<Cat>();
+            _catInstance = Instantiate(catPrefab, spawnCat);
+            cat = _catInstance.GetComponent<Cat>();
             cat.clotheIndex = new System.Random().Next(0, clothList.Count);
             int chance = Random.Range(0, 100);
             if (chance >= 95) cat.EyepatchIndex = 3;
@@ -103,5 +106,9 @@ public class GachaManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void DestroyCatInstance() {
+        Destroy(_catInstance);
     }
 }

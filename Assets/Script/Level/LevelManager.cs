@@ -121,7 +121,7 @@ public class LevelManager : MonoBehaviour
     private IEnumerator CountText(int value)
     {
         WaitForSeconds waitForSeconds = new WaitForSeconds(1f / _countFPS);
-        int previousValue = value;
+        int previousValue = _value;
         int stepAmount;
         
         stepAmount = value - previousValue < 0
@@ -133,7 +133,7 @@ public class LevelManager : MonoBehaviour
                 previousValue += stepAmount;
                 if (previousValue > value) previousValue = value;
 
-                goldWonTMP.SetText(previousValue.ToString("C2"));
+                goldWonTMP.SetText(previousValue.ToString("N"));
                 
                 yield return waitForSeconds;
             }
@@ -143,7 +143,7 @@ public class LevelManager : MonoBehaviour
                 previousValue += stepAmount;
                 if (previousValue < value) previousValue = value;
 
-                goldWonTMP.SetText(previousValue.ToString("C2"));
+                goldWonTMP.SetText(previousValue.ToString("N"));
                 
                 yield return waitForSeconds;
             }
