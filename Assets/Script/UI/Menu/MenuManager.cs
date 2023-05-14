@@ -38,9 +38,10 @@ public class MenuManager : MonoBehaviour
 
 
     public void Quit() {
-        if (Application.isEditor) EditorApplication.isPlaying = false;
-        else Application.Quit();
-       Application.Quit();
+        #if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+        #endif
+        Application.Quit();
     }
 
     public void MasterVolume(float masterLvl) {
