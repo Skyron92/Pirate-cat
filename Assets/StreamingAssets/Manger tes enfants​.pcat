@@ -1,0 +1,32 @@
+{
+    "catPrefab": {
+
+    },
+    "Name": "Manger tes enfants\u200b",
+    "playerCat": {
+        "hp": 0,
+        "maxHp": 15,
+        "NavigateurStat": 0,
+        "CanonnierStat": 0,
+        "EscrimeurStat": 0,
+        "Name": "Zeno\u200b",
+        "Hats": [],
+        "hatIndex": 4,
+        "Eyepatches": [],
+        "EyepatchIndex": 0,
+        "FurCat": null,
+        "furIndex": 0,
+        "Clothes": null,
+        "clotheIndex": 0,
+        "Body": null,
+        "Face": null,
+        "Ear": null,
+        "LeftHand": null,
+        "RightHand": null,
+        "Tail": null,
+        "isHurt": false
+    },
+    "hiredCats": [],
+    "team": [],
+    "gold": 620
+}
